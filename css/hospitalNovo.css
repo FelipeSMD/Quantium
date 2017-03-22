@@ -69,6 +69,7 @@ div{
 	left: 250px;
 	top: 200px;
 	overflow-y: auto;
+	background-image: url('../imagens/background_celular.png');
 }
 
 #esp1, #esp2, #esp3, #esp4, #esp5, #esp6{ 
