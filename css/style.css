@@ -1,0 +1,89 @@
+/*body {
+  width: 800px;
+  height: 600px;
+  background-image: url("../imagens/background_lab.png");
+}*/
+
+.balao {
+  width: 91.62%;
+  height: 98px;
+  background-image: url("../imagens/balao.png");
+  float: left;
+  position: absolute;
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+
+.balao_top {
+  top: 5%;
+  left: 4.19%;
+}
+
+.balao_bottom {
+  top: 80%;
+  left: 4.19%;
+}
+
+p a{
+  color: lime;
+  text-decoration: none;
+}
+
+p.balao_texto {
+}
+
+p.animado{
+  animation: type 3s steps(60, end); 
+}
+
+p.animado:nth-child(2){
+  animation: type2 6s steps(60, end);
+}
+
+p.animado:nth-child(3){
+  animation: type3 12s steps(60, end);
+}
+
+p.animado_rapido {
+  animation: type 1s steps(30, end); 
+}
+
+span.animado {
+  animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+  z-index: 10;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+}
+
+@keyframes type3{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+::selection{
+  background: black;
+}
+
+.botaoAcelerar {
+  height: 38px;
+  width: 35px;
+  position: absolute;
+  background-image: url('../imagens/botao_acelerar.png');
+  cursor: pointer;
+  bottom: 2%;
+  right: 2%;
+}

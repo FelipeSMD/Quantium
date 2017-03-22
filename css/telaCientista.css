@@ -1,0 +1,240 @@
+@font-face {
+  	font-family: "Ubuntu";
+  	src: url(../fontes/Ubuntu-R.ttf);
+}
+
+#bg, #ajuda, #celular, #termometro, #cientista, #Enviar{
+	position: absolute;
+	left: 0;
+	top:0; 
+}
+
+.clicavel{
+	cursor: pointer;
+}
+
+.butto-option{
+	background-color: #2aa089;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 0% 1% 0%;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+}
+
+.butto-option:hover{
+	background-color: #156b5a;
+}
+
+.mensagem_recebida{
+	position: relative;
+	background-color: #8FBC8F;
+	color: black;
+	border-radius: 5px;
+	min-width: 5px;
+	max-width: 220px;
+	min-height: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+}
+
+.mensagem_enviada{
+	position: relative;
+	color: black;
+	background-color: #98FB98;
+	border-radius: 5px;
+	min-width: 1px;
+	max-width: 220px;
+	min-height: 20px;
+	left: 20px;
+	margin-top: 5px;
+}
+
+div{
+	left: 0;
+	top:0; 
+}
+
+#dialogBox{
+	color: #fcfcfc;
+	position: absolute;
+	font-size: 12px;
+	width: 250px;
+	height: 130px;
+	left: 250px;
+	top: 200px;
+	overflow-y: auto;
+}
+
+
+#ajuda{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 60px; 
+}
+
+#celular{
+	position: absolute;
+	margin-top: 99px;
+	margin-left: 120px; 
+}
+
+#termometro{
+	position: absolute;
+	margin-top: 15px;
+	left: 680px;
+}
+
+#contatoBox{
+	position: absolute;
+	background-color: #2aa089;
+	margin-left: 248px;
+	top: 134px;
+	width: 252px;
+	height: 65px;
+}
+
+#Limpar{
+	position: absolute;
+	background-color: #2aa089;
+	color: white;
+	margin-left: 255px;
+	top: 360px;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+#Enviar{
+	position: absolute;
+	background-color: #2aa089;
+	color: white;
+	margin-left: 440px;
+	top: 360px;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+#cientista{
+	position: absolute;
+	margin-top: 140px;
+	margin-left: 265px;
+	width: 50px;
+	height: 50px;
+}
+
+#nomeContato{
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 330px;
+	font-size: 14px;
+	font-style: bold;
+}
+
+#status{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 330px;
+	font-size: 11px;
+	font-style: italic;
+}
+
+
+#borda{
+	position: absolute;
+	border:1px solid #aaaaaa;
+	margin-left: 248px;
+	top: 330px;
+	width: 250px;
+	height: 25px;
+}
+
+#botoes{
+	position: absolute;
+	margin-left: 248px;
+	background-color: #2aa089;
+	color: white;
+	display: inline-block;
+	border:1px solid #aaaaaa;
+	top: 382px;
+	width: 249px;
+	height: 130px;
+}
+
+
+#tutorialBox{
+	position: absolute;
+	width: 720px;
+	height: 88px;
+	color: white;
+	font-size: 20px;
+	font-family: "Ubuntu";
+	background-image: url(../imagens/balao.png);
+	margin-top: 480px;
+	margin-left: 35px;
+	padding: 5px;
+}
+
+#acelerar{
+	position: absolute;
+	z-index: 3;
+	margin-left: 710px;
+	margin-top: 530px;
+	cursor: pointer;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+}
+
+@keyframes type3{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+.blink { 
+
+	animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+  z-index: 10;
+}
+
+.animado{
+	animation: type2 6s steps(60, end);
+
+}
+
+#textoCompleto{
+	display: none;
+	font-family: "Ubuntu";
+}
+
+#textoAndamento1{
+	font-family: "Ubuntu";
+}
+
+#textoAndamento2{
+	display: none;
+	font-family: "Ubuntu";
+}
+

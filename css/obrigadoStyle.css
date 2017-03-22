@@ -1,0 +1,9 @@
+*{
+	margin: 0;
+}
+
+#content {
+	background-image: url("../imagens/obrigado.png");
+	width: 800px;
+	height: 600px;
+}

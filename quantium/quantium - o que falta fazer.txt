@@ -1,0 +1,6 @@
+1 - verificar se enviou os dados do form
+2 - resetar dados do form após mudar de tela
+3 - tela de menu
+4 - colocar browsers compatíveis no documento
+5 - pontinhos
+6 - integração do jogo

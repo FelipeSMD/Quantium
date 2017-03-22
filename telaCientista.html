@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<meta charset="utf-8"/>
+
+	
+	<script type="text/javascript" src="lib/jquery-2.1.4.min.js" DEFER></script>
+	<script type="text/javascript" src="lib/jquery-ui.js" DEFER></script>
+	<script type="text/javascript" src="js/functions.js" DEFER></script>
+	<script type="text/javascript" src="js/telaCientista.js" DEFER></script>
+
+	<link rel="stylesheet" type="text/css" href="css/telaCientista.css"/>
+	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
+	<title>Cientista</title>
+
+</head>
+
+<body>
+	<img id="bg" src= "imagens/background_lab.png">
+	<img id="ajuda"  src= "imagens/ajuda.png">
+	<img id="celular" src= "imagens/celular.png">
+	<img id="termometro" src= "imagens/termometro0.png">
+	<div id="contatoBox"> </div>
+	<img id="cientista" src= "imagens/cientist_comeco.png">
+	<div id="nomeContato">
+		<p >Alberto Stein</p>
+	</div>
+	<div id="status">
+		<p >Science !</p>
+	</div>
+	
+	<div id="borda"></div>
+	<div id="Limpar" onclick="resetar()">  Resetar </div>
+	<div id="Enviar" onclick="enviar()">  Enviar! </div>
+	<div id="botoes">
+		<span>|</span><div class="butto-option" id='bt1' onclick="resposta('bt1')">Sim</div><span>|</span><div id='bt2' class="butto-option" onclick="resposta('bt2')">Não</div><span>|</span>
+	</div>
+	
+	
+
+
+	<div id="dialogBox" ></div>
+	<!--
+	<div id="tutorialBox">
+		<div id="textoAndamento1"></div>
+		<div id="textoAndamento2"></div>
+		<div id="textoCompleto">O enfermeiro Baltazar Boaventura não está em nenhuma rede social e utiliza frequentemente a linguagem formal em seus diálogos.<span class="blink">|</span></div>
+	</div>
+	
+	<img id="acelerar" class="blink" onclick="acelerarTexto()" src="imagens/botao_acelerar.png">
+-->
+</body>
+
+</html>

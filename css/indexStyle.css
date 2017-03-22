@@ -1,0 +1,350 @@
+@font-face {
+    font-family: "Courier";
+    src: url("../fontes/courier.woff") format("woff"),
+    url("../fontes/courier.ttf") format("truetype");
+}
+
+*{
+	margin: 0;
+}
+
+p {
+  color: #FFF;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-family: "Courier";
+  margin: 0.5% 0 0 2%;
+}
+
+#inicioDiv {
+  width: 800px;
+  max-width: 100%;
+  height: 600px;
+  max-height: 100%;   
+  position: absolute;
+}
+
+#inicioP {
+  margin: 0px;
+  position: absolute; 
+  z-index: 10;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  top: 50%;
+}
+
+#content {
+	background-image: url("../imagens/mapa.png");
+	width: 800px;
+  max-width: 100%;
+  height: 600px;
+  max-height: 100%;
+  position: relative;
+}
+
+#nuvens {
+	width: 100%;
+	height: 100%;
+	background-image: url("../imagens/nuvens3.png");
+	-webkit-animation: slide 20s linear infinite;
+	animation: slide 20s linear infinite;
+  position: absolute;
+}
+
+@-webkit-keyframes slide {
+  from { background-position: 0 0;}
+	to { background-position: -2164px 0;}
+}
+
+@keyframes slide {
+  from { background-position: 0 0;}
+	to { background-position: -2164px 0;}
+}
+
+#avatar {
+	width: 30%;
+	height: 40%;
+	float: left;
+	margin: 18% 35% 0% 35%;
+  position: relative;
+}
+
+#avatar_imagem {
+	width: 235px;
+	height: 200px;
+	position: absolute;
+  top: 4%;
+  right: 1%;
+  background-image: url(../imagens/avatarF1.png);
+}
+
+#setaEsquerda {
+  width: 17px;
+  height: 94px;
+  position: absolute;
+  top: 22%;
+  background-image: url(../imagens/setaEsquerda.png);
+  cursor: pointer;
+  z-index: 2;
+}
+
+#setaEsquerda:hover {
+  background-image: url(../imagens/setaEsquerdaOn.png);
+}
+
+#setaDireita {
+  width: 17px;
+  height: 94px;
+  top: 22%;
+  right: 1.5%;
+  position: absolute;
+  background-image: url(../imagens/setaDireita.png);
+  cursor: pointer;
+  z-index: 2;
+}
+
+#setaDireita:hover {
+  background-image: url(../imagens/setaDireitaOn.png);
+}
+
+#nome_jogador {
+	width: 75%;
+	height: 31px;
+	background-color: #162629;
+	color: #C1C5C6;
+	padding-left: 10px;
+  font-family: "Courier";
+	font-size: 18px;
+	border: 0px solid #000;
+  position: absolute;
+  bottom: 1%;
+  z-index: 2;
+}
+
+.botao_ok {
+  width: 42px;
+  height: 33px;
+  background-image: url(../imagens/okOff.png);
+  padding: 0;
+  border: none;
+  position: absolute;
+  right: 2%;
+  bottom: 1%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.botao_ok:hover {
+  background-image: url(../imagens/okOn.png);
+}
+
+#nome_jogador:focus, .botao_ok:focus {
+  outline: 0;
+}
+
+#feedback_nomejogador {
+  position: absolute;
+  top: 35.6%;
+  left: 31.5%;
+  z-index: 1;
+}
+
+#avatar_jogador_mapa {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 58%;
+  left: 59%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#avatar_jogador_mapa img {
+  width: 100%;
+  height: auto;
+}
+
+#imagem_laboratorio {
+  width: 100%;
+  height: 100%;
+  float: left;
+}
+
+#imagem_laboratorio img {
+  position: absolute;
+  top: 0;
+}
+
+#tweets {
+  position: relative;
+  margin: 0;
+}
+
+img.tweet {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#tweet1 {
+  width: 25%;
+  height: auto;
+  margin: 6% 0 0 10%;
+  position: absolute;
+}
+
+#tweet2 {
+  width: 20%;
+  height: auto;
+  margin: 20% 0 0 25%;
+  position: absolute;
+}
+
+#tweet3 {
+  width: 25%;
+  height: auto;
+  margin: 5% 0 0 70%;
+  position: absolute;
+}
+
+#tweet4 {
+  width: 10%;
+  height: auto;
+  margin: 63% 0 0 76%;
+  position: absolute;
+}
+
+#tweet5 {
+  width: 25%;
+  height: auto;
+  margin: 45% 0 0 15%;
+  position: absolute;
+}
+
+#tweet6 {
+  width: 30%;
+  height: auto;
+  margin: 23% 0 0 54%;
+  position: absolute;
+}
+
+#tweet7 {
+  width: 15%;
+  height: auto;
+  margin: 5% 0 0 41%;
+  position: absolute;
+}
+
+#tweet8 {
+  width: 20%;
+  height: auto;
+  margin: 59% 0 0 47%;
+  position: absolute;
+}
+
+#tweet9 {
+  width: 25%;
+  height: auto;
+  margin: 38% 0 0 74%;
+  position: absolute;
+}
+
+#menu {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  top:15%;
+  left: 25%;
+}
+
+#logo {
+  position: absolute;
+  top: 12%;
+  left: 6%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#botoes {
+  width: 50%;
+  height: 15%;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.botao {
+  width: 25%;
+  height: 90%;
+  position: absolute;
+}
+
+#botao1 {
+  background-image: url('../imagens/iniciar.png');
+  left: 0;
+}
+
+#botao1:hover {
+  background-image: url('../imagens/iniciarOn.png');
+}
+
+#botao2 {
+  left: 37.5%;
+  background-image: url('../imagens/info.png');
+}
+
+#botao2:hover {
+  background-image: url('../imagens/infoOn.png');
+}
+
+#botao3 {
+  right: 0;
+  background-image: url('../imagens/ajudaGrande.png');
+}
+
+#botao3:hover {
+  background-image: url('../imagens/ajudaOn.png');
+}
+
+#botoes_tags {
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  bottom: 6%;
+  left: 10%;
+  z-index: 1;
+}
+
+.botao_tag {
+  width: 35%;
+  height: 60%;
+  background-image: url('../imagens/botao_balao.png');
+  position: absolute;
+  top: 5%;
+ }
+
+ #botao_tag1 {
+  left: 9%;
+}
+
+#botao_tag2 {
+  left: 32.5%;
+}
+
+#botao_tag3 {
+  right: 9.5%;
+}
+
+p.botao_texto {
+  font-size: 14px;
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+}
+
+
+

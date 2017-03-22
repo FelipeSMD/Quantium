@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/indexStyle.css"/>
+    <title>Quantium</title>
+
+</head>
+
+<body onload="inicioJogo()">
+
+	<div id="inicioDiv"><p id="inicioP"></p></div>
+
+	<div id="content">
+		<div id="nuvens">
+
+			<div class="balao balao_top" id="balao">
+				<span id="botao_acelerar" class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span>
+			</div>
+
+			<div id="avatar" style="display: none;">
+				
+				<div id="avatar_imagem" alt="avatar do jogador"></div>
+				<div id="setaEsquerda" alt="avatar anterior" onclick="setaEsquerdaClicked();"></div>
+				<div id="setaDireita" alt="próximo avatar" onclick="setaDireitaClicked();"></div>
+			
+				<form id="form_avatar">
+					<input id="nome_jogador" type="text" name="nome_jogador" alt="inserir nome do jogador">
+					<input class="botao_ok" type="button" alt="botão enviar" name="botao_ok" id="botao_ok" onclick="carregarMenu();">
+				</form>
+
+			</div>
+
+			<img id="feedback_nomejogador" src="imagens/feedback_nomejogador.png" alt="digite seu nome" style="display: none;"/>
+
+			<div class="balao balao_bottom" id="balao2" style="display: none;">
+				<a href="#"><span class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span></a>
+			</div>
+
+			<div id="avatar_jogador_mapa" style="display: none;">
+				<img id="avatar_jogador" src="imagens/avatarM1.png" alt="avatar selecionado" />
+			</div>
+		
+		</div>
+
+		<div id="imagem_laboratorio" style="display: none;">
+			<img src="imagens/imagem_laboratorio.png" alt="cena no laboratório">
+			<div class="balao balao_bottom" id="balao3">
+				<a href="#"><span class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span></a>
+			</div>
+		</div>
+
+		<div id="tweets">
+			<img id="tweet1" class="tweet" src="imagens/tweet1.png" alt="Victor - arroba vitinho: Aquilo era humano? Era Zumbi?" style="display: none;">
+			<img id="tweet2" class="tweet" src="imagens/tweet2.png" alt="Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet3" class="tweet" src="imagens/tweet3.png" alt="Ana Carla - arroba carldemais: Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet4" class="tweet" src="imagens/tweet4.png" alt="Jó Sales - arroba jozoeiro: Que tipo de bactéria faz isso? Hashtag eita, hashtag bactéria" style="display: none;">
+			<img id="tweet5" class="tweet" src="imagens/tweet5.png" alt="Gabriel - arroba gê bê erre: Eu vi um infectado! Hashtag bactéria" style="display: none;">
+			<img id="tweet6" class="tweet" src="imagens/tweet6.png" alt="Gledson - arroba gledson gleds: Mais um dia difícil pro povo brasileiro." style="display: none;">
+			<img id="tweet7" class="tweet" src="imagens/tweet7.png" alt="Bruna Som - arroba bruna esse: Com muito medo. Hashtag socorro hashtag help hashtag bactéria mortal" style="display: none;">
+			<img id="tweet8" class="tweet" src="imagens/tweet8.png" alt="Ricardo -  arroba richard lol: O que vamos fazer?" style="display: none;">
+			<img id="tweet9" class="tweet" src="imagens/tweet9.png" alt="João Victor - arroba dom joao: O governo já se manifestou? Hashtag help hashtag bactéria mortal" style="display: none;">
+		</div>
+
+		<div id="menu" style="display: none;">
+			<img id="logo" src="imagens/logo.png" alt="símbolo dos laboratórios Quantium">
+			<div id="botoes">
+				<div class="botao" id="botao1" alt="iniciar" onmouseover="carregarBalaoBotao('botao_tag1');" onmouseleave="esconderBalaoBotao('botao_tag1');" onclick="carregarIntro2();"></div>
+				<div class="botao" id="botao2" alt="informações" onmouseover="carregarBalaoBotao('botao_tag2');" onmouseleave="esconderBalaoBotao('botao_tag2');"></div>
+				<div class="botao" id="botao3" alt="ajuda" onmouseover="carregarBalaoBotao('botao_tag3');" onmouseleave="esconderBalaoBotao('botao_tag3');"></div>
+			</div>
+			<div id="botoes_tags">
+				<div class="botao_tag" id="botao_tag1" style="display: none;"><p class="botao_texto animado_rapido" id="botao_texto1">iniciar<span class="animado">|</span></p></div>
+				<div class="botao_tag" id="botao_tag2" style="display: none;"><p class="botao_texto animado_rapido" id="botao_texto2">info<span class="animado">|</span></p></div>
+				<div class="botao_tag" id="botao_tag3" style="display: none;"><p class="botao_texto animado_rapido" id="botao_texto3">ajuda<span class ="animado">|</span></p></div>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/inventario.js" DEFER></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/laboratorioStyle.css"/>
+	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
+    <title>Contatos</title>
+
+</head>
+
+<body onload="carregarTutorialContatos1();">
+
+	<div id="content">
+
+	<div id="main">
+
+		<div id="termometro">
+		</div>
+
+		<div id="termometro_highlight" style="display: none;">
+		</div>
+
+		<div id="celular">
+			<div class="celular_content" id="telaContatos">
+
+				<div class="titulo_app">
+					<p>SEUS CONTATOS</p>
+				</div>
+				
+				<div class="local_contato" id="local1">
+					<p>BIBLIOTECA</p>
+				</div>
+
+				<div class="contato" id="contato1" alt="chamar bibliotecária" onclick="carregarExercicio();">
+					<img class= "avatar_contato" src="imagens/avatar_amanda.png" />
+					<div class="info_contato">
+						<div class="nome_contato">Amanda Luz ;)</div>
+						<div class="status_contato">Status: Shh! Trabalhando mto!</div>
+						<img src="imagens/social1.png" />
+						<img src="imagens/social2.png" />
+						<img src="imagens/social3.png" />
+						<img src="imagens/social4.png" />
+					</div>
+				</div>
+
+				<div class="local_contato">
+					<p>HOSPITAL</p>
+				</div>
+
+				<div class="contato contatoBloqueado" id="contato2" alt="chamar enfermeiro">
+					<img class= "avatar_contato" src="imagens/avatar_baltazar.png"/>
+					<div class="info_contato">
+						<div class="nome_contato">Baltazar Boaventura</div>
+						<div class="status_contato">Desejo um bom dia para ti!</div>
+					</div>
+				</div>
+
+				<div class="local_contato">
+					<p>FARMÁCIA</p>
+				</div>
+
+				<div class="contato contatoBloqueado" id="contato3">
+					<img class= "avatar_contato" src="imagens/avatar_higia.png" />
+					<div class="info_contato">
+						<div class="nome_contato">Hígia Albuquerque</div>
+						<div class="status_contato">Hey! I'm using QuantZap!</div>
+						<img src="imagens/social2.png" />
+					</div>
+				</div>
+
+				<div class="local_contato">
+					<p>FAZENDA</p>
+				</div>
+
+				<div class="contato contatoBloqueado" id="contato4">
+					<img class= "avatar_contato" src="imagens/avatar_bibliotecaria.png" />
+					<div class="info_contato">
+						<div class="nome_contato">Marcela Souza</div>
+						<div class="status_contato">Desejo um bom dia para ti!</div>
+						<img src="imagens/social2.png" />
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="instrucao1" style="display: none;"></div>
+
+		<div id="botoes_extras">
+			<div class="botao_extra" id="avatar_selecionado" onclick="abreFechaInventario()"></div>
+			<div class="botao_extra" id="botao_ajuda"></div>
+		</div>
+
+		<div id="telaInventario">
+			<div id="modalFundo"></div>
+			<img id="inventarioPainel" src="imagens/inventário.png">
+			<img id="personagemEscolhido" src="imagens/avatarF1.png">
+			<div id="nomeJogadorInv">Nome</div>
+			<div id="generoJogadorInv">Estagiário na empresa</div>
+			<div id="fecharInventario" onclick="abreFechaInventario()"></div>
+			<img id="miniatura1" class="clicavel" onclick="mudaImagem('livroPequeno')" src="imagens/livroPequeno.png">
+			<img id="miniatura2" class="clicavel" onclick="mudaImagem('hemograma_cel')" src="imagens/hemograma_cel.png">
+			<div id="boxImagemCentral">
+				<div id="modalFundo"></div>
+				<img id="imagemCentral" onclick="mudaImagem()" src="imagens/hemograma_cel.png">
+			</div>
+		</div>
+
+		</div> <!-- Fecha Main -->
+
+		<div class="balao balao_bottom" id="balao" style="display: none;">
+			<span id="botao_acelerar" class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

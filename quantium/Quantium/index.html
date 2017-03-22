@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body onload="carregarJogo()">
+
+	<div id="content">
+		<div id="nuvens">
+
+			<div id="balao">
+			</div>
+
+			<div id="avatar" style="display: none;">
+				
+				<div id="avatar_imagem">
+					<img id="avatar_base" src="imagens/avatar_base.png">
+					<img id="avatar1" src="imagens/avatar1.png" alt="avatar masculino">
+					<img id="avatar2" src="imagens/avatar2.png" alt="avatar feminino" style="display: none;">
+				</div>
+			
+				<form>
+					<input id="nome_jogador" type="text" name="nome_jogador" alt="inserir nome do jogador">
+					<div class="radios">
+						<input id="masculino" type="radio" name="sexo_jogador" alt="selecionar sexo masculino" title="masculino" value="masculino" onclick="showAvatar('avatar1', 'avatar2', 'nome_jogador');" alt="oi" checked>
+						<label class="radio_sexo masculino" for="masculino"></label>
+						<input id="feminino" type="radio" name="sexo_jogador" alt="selecionar sexo feminino" title="feminino" value="feminino" onclick="showAvatar('avatar2', 'avatar1', 'nome_jogador');">
+						<label class="radio_sexo feminino" for="feminino"></label>
+					</div>
+					<input class="botao_ok" type="button" alt="botão enviar" name="botao_ok" value="OK" onclick="carregarIntro2();">
+				</form>
+
+			</div>
+
+			<div id="balao2" style="display: none;">
+			</div>
+
+			<div id="avatar_selecionado" style="display: none;">
+				<img id="avatar_base_menor" src="imagens/avatar_base.png">
+				<img id="avatar1_menor" src="imagens/avatar1.png" alt="avatar masculino">
+				<img id="avatar2_menor" src="imagens/avatar2.png" alt="avatar feminino">
+			</div>
+		
+		</div>
+
+		<div id="imagem_laboratorio" style="display: none;">
+			<img src="imagens/imagem_laboratorio.png" alt="cena no laboratório">
+			<div id="balao3">
+			</div>
+		</div>
+
+		<div id="tweets">
+			<img id="tweet1" src="imagens/tweet1.png" alt="Victor - arroba vitinho: Aquilo era humano? Era Zumbi?" style="display: none;">
+			<img id="tweet2" src="imagens/tweet2.png" alt="Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet3" src="imagens/tweet2.png" alt="Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet4" src="imagens/tweet1.png" alt="Victor - arroba vitinho: Aquilo era humano? Era Zumbi?" style="display: none;">
+			<img id="tweet5" src="imagens/tweet3.png" alt="Ana Carla - arroba carldemais: Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet6" src="imagens/tweet3.png" alt="Ana Carla - arroba carldemais: Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet7" src="imagens/tweet1.png" alt="Victor - arroba vitinho: Aquilo era humano? Era Zumbi?" style="display: none;">
+			<img id="tweet8" src="imagens/tweet2.png" alt="Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+			<img id="tweet9" src="imagens/tweet2.png" alt="Muito Bizarro! Vi umas pessoas estranhas hoje!" style="display: none;">
+		</div>
+
+		<div id="menu" style="display: none;">
+			<img id="logo" src="imagens/logo.png" alt="símbolo dos laboratórios Quantium">
+			<div id="botoes">
+				<a href="#play"><img id="play" src="imagens/iniciar.png"></a>
+				<a href="#play"><img id="info" src="imagens/info.png"></a>
+				<a href="#play"><img id="ajuda" src="imagens/ajuda.png"></a>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

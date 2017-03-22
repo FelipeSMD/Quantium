@@ -1,0 +1,109 @@
+#videoTela {
+	width:100%;
+	height:84%;
+	z-index: 2;
+}
+
+#videoTela #textoAceitar{
+	margin-top: 30%;
+	margin-left: 10%;
+	margin-right:10%;
+	text-align:center;
+}
+
+#videoTela button{
+	background-color: green;
+	border:none;
+	border-radius: 4px;
+	margin-top:20px;
+	margin-left:37%;
+	padding:10px;
+}
+
+#videoConf1 {
+	position:absolute;
+	background-image: url("../imagens/conf1.png");
+	width:100%;
+	height:84%;	
+}
+
+#videoConf1 #mensagemConf{
+	margin: 110% 10px 0px 10px;
+	background-color: #c0cad8;
+	padding: 5px;
+	border-radius:7px;
+}
+
+#videoConf2 {	
+	position:relative;
+	width:100%;
+	height:100%;	
+}
+
+#livro_biblioteca {
+	width: 100%;
+	height: 75%;
+	position:absolute;
+}
+
+#print_biblioteca {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 26%;
+	position:absolute;
+	top: 74%;
+}
+
+#videoConf3 {	
+	z-index:1;
+	position:absolute;		
+	background-image: url("../imagens/conf3.png");
+	width:100%;
+	height:100%;	
+}
+
+#videoConf4 {
+	z-index:2;	
+	position:absolute;		
+	background-image: url("../imagens/conf4.png");
+	width:100%;
+	height:100%;	
+}
+
+#videoConf5 {
+	z-index:3;	
+	position:absolute;		
+	background-image: url("../imagens/conf5.png");
+	width:100%;
+	height:100%;	
+}
+
+#printButton {
+	position:absolute;
+	width:50px;
+	height:50px;
+	margin-top:106%;
+	margin-left:75%;
+	cursor: pointer;
+}
+
+#printEffect {	
+	position:absolute;		
+	background-color:white;
+	width:100%;
+	height:100%;
+}
+
+#printEffect2 {	
+	position:absolute;		
+	background-color:black;
+	width:100%;
+	height:100%;	
+	z-index:2;
+}
+
+.balao {
+	position:absolute;
+	z-index:3;
+}

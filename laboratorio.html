@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<meta charset="utf-8"/>
+	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/exercicio.js"></script>
+	<script type="text/javascript" src="js/inventario.js" DEFER></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/laboratorioStyle.css"/>
+	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
+	<title>Laboratório</title>
+
+</head>
+
+<body onload="carregarTutorialBiblioteca1();">
+
+	<div id="content">
+	<div id="main">
+
+		<div id="termometro">
+			<!--<img id="termometroImg" src="imagens/termometro0.png" />-->
+		</div>
+
+
+		<div id="celular">
+			<div class="celular_content" id="telaExercicio">
+				
+				<div class="contato contatoNaoClicavel" id="contato_telaExercicio">
+					<div id="btn_voltar" class="botao_voltar" onclick="voltarTelaContatos();"></div>
+					<img class= "avatar_contato" src="imagens/avatar_amanda.png" />
+					<div class="info_contato">
+						<div class="nome_contato">Amanda Luz ;)</div>
+						<div class="status_contato">Status: Shh! Trabalhando mto!</div>
+						<img src="imagens/social1.png" />
+						<img src="imagens/social2.png" />
+						<img src="imagens/social3.png" />
+						<img src="imagens/social4.png" />
+					</div>
+					
+				</div>
+				
+				<div id="mensagens">
+					
+				</div>
+				
+				<div id="celular_footer">
+					<div id="celular_mensagens">				
+						<p id="text">						
+						</p>				
+					</div>
+
+					<div id="divsend">
+						<button id="delete">Apagar!</button>
+						<button id="send">Enviar!</button>
+					</div>
+					
+					<div id="divbuttons">
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="instrucao2" style="display: none;"></div>
+
+		<div id="instrucao3" style="display: none;"></div>
+
+		<div id="instrucao4" style="display: none;"></div>
+
+		<div id="telaInventario">
+		<div id="modalFundo"></div>
+		<img id="inventarioPainel" src="imagens/inventário.png">
+		<img id="personagemEscolhido" src="imagens/avatarF1.png">
+		<div id="nomeJogadorInv">Nome</div>
+		<div id="generoJogadorInv">Estagiário na empresa</div>
+		<div id="fecharInventario" onclick="abreFechaInventario()"></div>
+		<img id="miniatura1" class="clicavel" onclick="mudaImagem('livroPequeno')" src="imagens/livroPequeno.png">
+		<img id="miniatura2" class="clicavel" onclick="mudaImagem('hemograma_cel')" src="imagens/hemograma_cel.png">
+		<div id="boxImagemCentral">
+			<div id="modalFundo"></div>
+			<img id="imagemCentral" onclick="mudaImagem()" src="imagens/hemograma_cel.png">
+		</div>
+
+	</div> <!-- Fecha Main -->
+
+		<div class="balao balao_bottom" id="balao" style="display: none;">
+			<span class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span>
+		</div>
+
+		<div id="botoes_extras">
+			<div class="botao_extra" id="avatar_selecionado" onclick="abreFechaInventario()"></div>
+				<div class="botao_extra" id="botao_ajuda"></div>
+		</div>
+
+		<div id="transparente"> </div>
+	
+	</div>
+
+</body>
+
+</html>

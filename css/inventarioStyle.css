@@ -1,0 +1,91 @@
+@font-face {
+  	font-family: "Ubuntu";
+  	src: url(../fontes/Ubuntu-R.ttf);
+}
+
+#telaInventario{
+	display: none;
+}
+
+#inventario_bt{
+	position: absolute;
+	margin-left: 5px;
+	margin-top: 2px;
+}
+
+#inventarioPainel{
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 30px;
+}
+
+#modalFundo{
+	position: absolute;
+	margin: 0px;
+	background-color: black;
+	opacity: 0.5;
+	width: 800px;
+	height: 600px;
+}
+
+#fecharInventario{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin-left: 735px;
+	margin-top: 60px;
+}
+
+#nomeJogadorInv{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 400px;
+	font-size: 30px; 
+	color: white;
+}
+
+#generoJogadorInv{
+	position: absolute;
+	margin-top: 190px;
+	margin-left: 400px;
+	font-size: 14px;
+	font-family: "Courier";
+	white-space: pre-wrap; 
+	color: white;
+}
+
+#personagemEscolhido{
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 250px;
+	width: 135px;
+	height: 100px;
+}
+
+#imagemCentral{
+	position: absolute;
+	margin-top: 110px;
+	margin-left: 260px;
+}
+
+#boxImagemCentral{
+	display: none;
+}
+
+#miniatura1{
+	position: absolute;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin-top: 450px;
+	margin-left: 165px;
+}
+
+#miniatura2{
+	position: absolute;
+	display: none;
+	width: 50px;
+	height: 50px;
+	margin-top: 450px;
+	margin-left: 315px;	
+}

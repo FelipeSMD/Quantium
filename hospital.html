@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+	<meta charset="utf-8"/>
+
+	
+	<script type="text/javascript" src="lib/jquery-2.1.4.min.js" DEFER></script>
+	<script type="text/javascript" src="lib/jquery-ui.js" DEFER></script>
+	<script type="text/javascript" src="js/functions.js" DEFER></script>
+	<script type="text/javascript" src="js/hospitalNovo.js" DEFER></script>
+	<script type="text/javascript" src="js/inventario.js" DEFER></script>
+
+	<link rel="stylesheet" type="text/css" href="css/hospitalNovo.css"/>
+	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
+	<title>Hospital</title>
+
+</head>
+
+<body>
+	<img id="bg" src= "imagens/background_lab.png">
+	<img id="ajuda"  src= "imagens/ajuda.png">
+	<img id="inventario_bt" src='imagens/icon_avatarM1.png' onclick="abreFechaInventario()">
+	<img id="celular" src= "imagens/celular.png">
+	<img id="termometro" src= "imagens/termometro0.png">
+	<div id="contatoBox"> </div>
+	<img id="baltazar" src= "imagens/avatar_baltazar.png">
+	<a href= "contatos.html" ><img id="seta" src= "imagens/botao_voltar.png"></a>
+	<div id="nomeContato">
+		<p >Baltazar Boaventura</p>
+	</div>
+	<div id="status">
+		<p >Desejo um bom dia pra ti!</p>
+	</div>
+	
+	<div id="borda"></div>
+	<div id="Limpar" onclick="resetar()">  Resetar </div>
+	<div id="Enviar" onclick="somaResposta()">  Enviar! </div>
+	
+	
+
+	<div id="esp1" ondrop="drop(event)" ondragover="allowDrop(event, esp1)"></div>
+	<div id="esp2" ondrop="drop(event)" ondragover="allowDrop(event, esp2)" ></div>
+	<div id="esp3" ondrop="drop(event)" ondragover="allowDrop(event, esp3)" ></div>
+	<div id="esp4" ondrop="drop(event)" ondragover="allowDrop(event, esp4)" ></div>
+	<div id="esp5" ondrop="drop(event)" ondragover="allowDrop(event, esp5)" ></div>
+	<div id="esp6" ondrop="drop(event)" ondragover="allowDrop(event, esp6)" ></div>
+	<img id="frases" src="imagens/frases.png">
+	<div id="frasesBox1" ondrop="drop(event)" ondragover="allowDrop(event)" >
+		<div id="fra1" draggable="true" ondragstart="drag(event)" >Preciso fzr</div>
+		<div id="fra2" draggable="true" ondragstart="drag(event)" >Você pode me ajudar?</div>
+		<div id="fra3" draggable="true" ondragstart="drag(event)" >Oi, <img src='imagens/emoji_thumbsup.png'/>.</div>
+		<div id="fra4" draggable="true" ondragstart="drag(event)" >um antibiótico</div>
+		<div id="fra5" draggable="true" ondragstart="drag(event)" >tomou conta da cidade.</div>
+		<div id="fra6" draggable="true" ondragstart="drag(event)" >Vc pde me ajudar ?</div>
+		<div id="fra7" draggable="true" ondragstart="drag(event)" >porque uma bactéria</div>
+		<div id="fra8" draggable="true" ondragstart="drag(event)" >Preciso fazer</div>
+		<div id="fra9" draggable="true" ondragstart="drag(event)" >pq 1 bactéria</div>
+		<div id="fra10" draggable="true" ondragstart="drag(event)" >Olá, como vai ?</div>
+	</div>
+	<div id="frasesBox2" ondrop="drop(event)" ondragover="allowDrop(event)" >
+		<div id="fra11" draggable="true" ondragstart="drag(event)" >Gostaria q vc enviasse</div>
+		<div id="fra12" draggable="true" ondragstart="drag(event)" >1 exame</div>
+		<div id="fra13" draggable="true" ondragstart="drag(event)" >com a taxa de leucócitos</div>
+		<div id="fra14" draggable="true" ondragstart="drag(event)" >de 1 pessoa</div>
+		<div id="fra15" draggable="true" ondragstart="drag(event)" >de 14 anos infectada.</div>
+		<div id="fra16" draggable="true" ondragstart="drag(event)" >Obg.</div>
+		<div id="fra17" draggable="true" ondragstart="drag(event)" >Gostaria que você enviasse</div>
+		<div id="fra18" draggable="true" ondragstart="drag(event)" >um exame</div>
+		<div id="fra20" draggable="true" ondragstart="drag(event)" >de uma pessoa</div>
+		<div id="fra22" draggable="true" ondragstart="drag(event)" >Obrigado.</div>
+	</div>
+	<div id="frasesBox3" ondrop="drop(event)" ondragover="allowDrop(event)" >
+		<div id="fra23" draggable="true" ondragstart="drag(event)" ><img src='imagens/emoji_thumbsup.png'/>. Obg.</div>
+		<div id="fra24" draggable="true" ondragstart="drag(event)" >Tudo bem. Obrigado!</div>
+	</div>
+
+	<div id="dialogBox" ></div>
+	
+	<div id="tutorialBox">
+		<div id="textoAndamento1"></div>
+		<div id="textoAndamento2"></div>
+		<div id="textoCompleto">O enfermeiro Baltazar Boaventura não está em nenhuma rede social e utiliza frequentemente a linguagem formal em seus diálogos.<span class="blink">|</span></div>
+	</div>
+	
+	<img id="acelerar" class="blink" onclick="acelerarTexto()" src="imagens/botao_acelerar.png">
+
+	<div id="telaInventario">
+		<div id="modalFundo"></div>
+		<img id="inventarioPainel" src="imagens/inventário.png">
+		<img id="personagemEscolhido" src="imagens/avatarF1.png">
+		<div id="nomeJogadorInv">Nome</div>
+		<div id="generoJogadorInv">Estagiário na empresa</div>
+		<div id="fecharInventario" onclick="abreFechaInventario()"></div>
+		<img id="miniatura1" class="clicavel" onclick="mudaImagem('livroPequeno')" src="imagens/livroPequeno.png">
+		<img id="miniatura2" class="clicavel" onclick="mudaImagem('hemograma_cel')" src="imagens/hemograma_cel.png">
+		<div id="boxImagemCentral">
+			<div id="modalFundo"></div>
+			<img id="imagemCentral" onclick="mudaImagem()" src="imagens/hemograma_cel.png">
+		</div>
+	</div>
+	
+
+		
+	
+
+</body>
+
+</html>

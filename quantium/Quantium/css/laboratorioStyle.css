@@ -1,0 +1,188 @@
+@font-face {
+  	font-family: "Ubuntu";
+  	src: url(../fontes/Ubuntu-R.ttf);
+}
+
+@font-face {
+  	font-family: "Ubuntu";
+  	src: url(../fontes/Ubuntu-B.ttf);
+  	font-weight: bold;
+}
+
+*{
+	font-family: "Ubuntu";
+	font-size:14px;
+}
+
+body {
+	margin: 0;
+}
+
+#content {
+	width: 800px;
+    max-width: 100%;
+    height: 613px;
+    max-height: 100%;
+	position: relative;
+	background-image: url("../imagens/bg_laboratorio.png");
+	margin: 0;
+}
+
+#celular {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	width: 286px;
+	height: 471px;
+    background-image: url("../imagens/borda_celular.png");
+	margin: auto;
+}
+
+#celular_content {
+	width: 88%;
+	height: 80.7%;
+	background-color: #FCF8E8;
+	margin: auto;
+	border-style: solid;
+    border-width: 1px;
+    border-color: #8493A8;
+    margin-top: 12.2%;
+}
+
+
+#celular_header {
+	width: 100%;
+	height: 17%;
+	background-color: #5C7293;
+	border-bottom: 1px solid #8493A8;
+}
+
+#celular_header img {
+    margin-left: 2%;
+}
+
+#botao_voltar{
+	margin-bottom: 10px;
+}
+
+#avatar_bibliotecaria{
+	margin-top: 3%;
+}
+
+#informacoes_bibliotecaria {
+	float: right;
+	width: 65%;
+	margin-top: 1%;
+	margin-right: 2%;
+}
+
+#informacoes_bibliotecaria img {
+	margin-top: 1%;
+}
+
+#nome_bibliotecaria {
+	font-size: 90%;
+	font-weight: bold; 
+}
+
+#status_bibliotecaria {
+	font-size: 70%;
+}
+
+
+#celular_footer {
+	background-color: #5C7293;
+	width: 88%;
+	bottom: 55px;
+	position: absolute;
+	height: 40%;
+}
+
+#text {
+	margin:0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+#divsend {
+	background-color: #FCF8E8;
+	overflow:auto;
+
+	
+}
+#delete {
+	
+	float:left;
+}
+
+#send {
+
+	float:right;
+}
+
+button {
+	background-color: #5C7293; 
+    border:none;
+
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: #8493A8;
+
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: #8493A8;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    font-size: 16px;
+}
+
+button:hover {
+	background-color: #4C6283; 
+    border:none;
+    
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: #8493A8;
+
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: #8493A8;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    font-size: 16px;
+}
+
+.mensagem_enviada {
+	margin: 7px 7px 7px 50px;
+	background-color:#90a1bb;
+	border-radius: 7px;
+	padding:7px;
+}
+
+.mensagem_recebida {
+	margin: 7px 50px 7px 7px;
+	background-color:#c0cad8;
+	border-radius: 7px;
+	padding:7px;
+}
+
+
+#celular_mensagens {
+	
+	margin:0;
+	background-color:#FCF8E8;
+	border-top:1px solid #8493A8;
+	border-bottom:1px solid #8493A8;
+	padding:7px;
+}

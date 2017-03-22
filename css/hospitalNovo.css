@@ -1,0 +1,436 @@
+@font-face {
+  	font-family: "Courier";
+  	src: url("../fontes/courier.woff") format("woff"),
+    url("../fontes/courier.ttf") format("truetype");
+}
+
+@font-face {
+  	font-family: "Ubuntu";
+  	src: url(../fontes/Ubuntu-R.ttf);
+}
+
+@font-face {
+  	font-family: "Ubuntu-Bold";
+  	src: url(../fontes/Ubuntu-B.ttf);
+  	font-weight: bold;
+}
+
+@font-face {
+  	font-family: "Ubuntu-Medium-Italic";
+  	src: url(../fontes/Ubuntu-MI.ttf);
+  	font-style: italic;
+}
+
+#bg, #ajuda, #celular, #termometro, #baltazar, #Enviar{
+	position: absolute;
+	left: 0;
+	top:0; 
+}
+
+.clicavel{
+	cursor: pointer;
+}
+
+.mensagem_recebida{
+	position: relative;
+	background-color: #8FBC8F;
+	color: black;
+	border-radius: 5px;
+	min-width: 5px;
+	max-width: 220px;
+	min-height: 20px;
+	margin-top: 5px;
+	overflow-x: hidden;
+}
+
+.mensagem_enviada{
+	position: relative;
+	color: black;
+	background-color: #98FB98;
+	border-radius: 5px;
+	min-width: 1px;
+	max-width: 220px;
+	min-height: 20px;
+	left: 20px;
+	margin-top: 5px;
+}
+
+div{
+	left: 0;
+	top:0; 
+}
+
+#dialogBox{
+	color: #fcfcfc;
+	position: absolute;
+	font-size: 12px;
+	width: 250px;
+	height: 130px;
+	left: 250px;
+	top: 200px;
+	overflow-y: auto;
+}
+
+#esp1, #esp2, #esp3, #esp4, #esp5, #esp6{ 
+	position: absolute;
+	background-color: #2aa089;
+	color: white;
+	border-radius: 5px;
+	width: 75px;
+	height: 35px;
+
+}
+
+#fra1, #fra2, #fra3, #fra4, #fra5, #fra6, #fra7, #fra8, #fra9, #fra10, #fra11, #fra12, #fra13, #fra14, #fra15, #fra16, #fra17, #fra18, #fra19, #fra20, #fra21, #fra22, #fra23, #fra24 {
+	background-color: #2aa089;
+	position: absolute;
+	color: white;
+	font-size: 12px;
+	border-radius: 5px;
+	width: 75px;
+	min-height: 35px;
+	cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+
+#fra1{
+	margin-left: 5px;
+}
+
+#fra2{
+	margin-left: 5px;
+	margin-top: 40px;
+}
+
+#fra3{
+	margin-left: 5px;
+	margin-top: 80px;
+}
+
+#fra4{
+	margin-left: 5px;
+	margin-top: 120px;
+}
+
+#fra5{
+	margin-left: 5px;
+	margin-top: 160px;
+}
+
+#fra6{
+	margin-left: 85px;
+	margin-top: 160px;
+}
+
+#fra7{
+	margin-left: 85px;
+}
+
+#fra8{
+	margin-left: 85px;
+	margin-top: 40px;
+}
+
+#fra9{
+	margin-left: 85px;
+	margin-top: 80px;
+}
+
+#fra10{
+	margin-left: 85px;
+	margin-top: 120px;
+}
+
+#fra11{
+	margin-left: 5px;
+}
+
+#fra12{
+	margin-left: 5px;
+	margin-top: 40px;
+}
+
+#fra13{
+	margin-left: 5px;
+	margin-top: 80px;
+}
+
+#fra14{
+	margin-left: 5px;
+	margin-top: 120px;
+}
+
+#fra15{
+	margin-left: 5px;
+	margin-top: 160px;
+}
+
+#fra16{
+	margin-left: 85px;
+	margin-top: 160px;
+}
+
+#fra17{
+	margin-left: 85px;
+}
+
+#fra18{
+	margin-left: 85px;
+	margin-top: 40px;
+}
+
+#fra19{
+	margin-left: 85px;
+	margin-top: 80px;
+}
+
+#fra20{
+	margin-left: 85px;
+	margin-top: 80px;
+}
+
+
+#fra22{
+	margin-left: 85px;
+	margin-top: 120px;
+}
+
+#fra23{
+	margin-left: 5px;
+}
+
+#fra24{
+	margin-left: 85px;
+}
+
+
+
+#esp1{
+	margin-top: 370px;
+	margin-left: 255px;
+}
+
+#esp2{
+	margin-top: 370px;
+	margin-left: 335px;
+}
+
+#esp3{
+	margin-top: 370px;
+	margin-left: 415px;
+}
+
+#esp4{
+	margin-top: 410px;
+	margin-left: 255px;
+}
+
+#esp5{
+	margin-top: 410px;
+	margin-left: 335px;
+}
+
+#esp6{
+	margin-top: 410px;
+	margin-left: 415px;
+}
+
+#ajuda{
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 60px; 
+}
+
+#celular{
+	position: absolute;
+	margin-top: 99px;
+	margin-left: 120px; 
+}
+
+#termometro{
+	position: absolute;
+	margin-top: 15px;
+	left: 680px;
+}
+
+#contatoBox{
+	position: absolute;
+	background-color: #2aa089;
+	margin-left: 248px;
+	top: 134px;
+	width: 252px;
+	height: 65px;
+}
+
+#Limpar{
+	position: absolute;
+	background-color: #2aa089;
+	color: white;
+	margin-left: 255px;
+	top: 340px;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+#Enviar{
+	position: absolute;
+	background-color: #2aa089;
+	color: white;
+	margin-left: 440px;
+	top: 340px;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+#baltazar{
+	position: absolute;
+	margin-top: 140px;
+	margin-left: 265px;
+}
+
+#seta{
+	position: absolute;
+	margin-top: 140px;
+	margin-left: 240px;
+}
+
+#nomeContato{
+	position: absolute;
+	margin-top: 130px;
+	margin-left: 330px;
+	font-size: 14px;
+	font-style: bold;
+}
+
+#status{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 330px;
+	font-size: 11px;
+	font-style: italic;
+}
+
+
+#borda{
+	position: absolute;
+	border:1px solid #aaaaaa;
+	margin-left: 248px;
+	top: 330px;
+	position: absolute;
+	width: 250px;
+	height: 185px;
+}
+
+#frasesBox1{
+	position: absolute;
+	border-radius: 5px;
+	margin-left: 590px;
+	top: 190px;
+	width: 200px;
+	height: 430px;
+	
+}
+
+#frasesBox2{
+	position: absolute;
+	border-radius: 5px;
+	margin-left: 590px;
+	top: 190px;
+	width: 200px;
+	height: 430px;
+	display: none;
+}
+
+#frasesBox3{
+	position: absolute;
+	border-radius: 5px;
+	margin-left: 590px;
+	top: 190px;
+	width: 200px;
+	height: 430px;
+	display: none;
+}
+
+#frases{
+	position: absolute;
+	top: 110px;
+	margin-left: 547px;
+	width: 233px;
+	height: 381px;
+
+}
+
+#tutorialBox{
+	position: absolute;
+	width: 720px;
+	height: 88px;
+	color: white;
+	font-size: 20px;
+	font-family: "Courier";
+	background-image: url(../imagens/balao.png);
+	margin-top: 480px;
+	margin-left: 35px;
+	padding: 5px;
+}
+
+#acelerar{
+	position: absolute;
+	z-index: 3;
+	margin-left: 710px;
+	margin-top: 530px;
+	cursor: pointer;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+}
+
+@keyframes type3{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+.blink { 
+
+	animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+  z-index: 10;
+}
+
+.animado{
+	animation: type2 6s steps(60, end);
+
+}
+
+#textoCompleto{
+	display: none;
+	font-family: "Courier";
+}
+
+#textoAndamento1{
+	font-family: "Courier";
+}
+
+#textoAndamento2{
+	display: none;
+	font-family: "Courier";
+}
+
