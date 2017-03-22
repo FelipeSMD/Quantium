@@ -30,7 +30,9 @@
 			
 				<form id="form_avatar">
 					<input id="nome_jogador" type="text" name="nome_jogador" alt="inserir nome do jogador">
-					<input class="botao_ok" type="button" alt="botão enviar" name="botao_ok" id="botao_ok" onclick="carregarMenu();">
+					<div>
+						<input class="botao_ok" type="button" alt="botão enviar" name="botao_ok" id="botao_ok" value="OK" onclick="carregarMenu();">
+					</div>	
 				</form>
 
 			</div>
@@ -71,7 +73,7 @@
 			<div id="botoes">
 				<div class="botao" id="botao1" alt="iniciar" onmouseover="carregarBalaoBotao('botao_tag1');" onmouseleave="esconderBalaoBotao('botao_tag1');" onclick="carregarIntro2();"></div>
 				<div class="botao" id="botao2" alt="informações" onmouseover="carregarBalaoBotao('botao_tag2');" onmouseleave="esconderBalaoBotao('botao_tag2');"></div>
-				<div class="botao" id="botao3" alt="ajuda" onmouseover="carregarBalaoBotao('botao_tag3');" onmouseleave="esconderBalaoBotao('botao_tag3');"></div>
+				<div class="botao" id="botao3" alt="ajuda" onmouseover="carregarBalaoBotao('botao_tag3');" onmouseleave="esconderBalaoBotao('botao_tag3');">?</div>
 			</div>
 			<div id="botoes_tags">
 				<div class="botao_tag" id="botao_tag1" style="display: none;"><p class="botao_texto animado_rapido" id="botao_texto1">iniciar<span class="animado">|</span></p></div>
