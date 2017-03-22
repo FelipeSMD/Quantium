@@ -41,8 +41,13 @@ p {
   color: white;
   text-align: center;
   top: 50%;
+  text-shadow:4px 4px 5px rgba(50, 50, 50, 0.8);
+  
 }
 
+#inicioP:hover{
+  text-shadow:7px 7px 5px rgba(50, 50, 50, 0.8);
+}
 #content {
 	background-image: url("../imagens/mapa.png");
 	width: 800px;
