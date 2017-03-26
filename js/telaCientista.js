@@ -4,7 +4,7 @@ var finalTutorial = false;
 
 insertFirstMessage();
  function insertFirstMessage(){
-    $("#dialogBox").append('<div class="mensagem_recebida">Socorro,'+ localStorage.getItem("nomeJogador")+'. Pessoas estão sendo infectadas por um tipo de bactéria. Não posso sair de casa ou vou me infectar.</div>');
+    $("#dialogBox").append('<div class="mensagem_recebida">Socorro,'+ localStorage.getItem("nomeJogador")+'. Não posso sair de casa ou vou me infectar.</div>');
     $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
 
     $("#dialogBox").append('<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>');
@@ -22,9 +22,17 @@ function enviar(){
 	if(resp == "Sim"){
 		$("#dialogBox").append('<div class="mensagem_enviada">Sim</div>');
     	$("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+        setInterval(function () {
+            localStorage.setItem("primeiraVez", false);
+            localStorage.setItem("bibliotecaAtacada", false);
+            localStorage.setItem("hospitalDesbloqueado", true);
+            window.location.href = 'contatos.html';
+        }, 900);
     }else if(resp == "Não"){
     	document.getElementById("termometro").src = "imagens/termometro8.png";
-    	$("#dialogBox").append('<div class="mensagem_enviada">YOU DIEEEE!!</div>');
+        $("#dialogBox").append('<div class="mensagem_enviada">Não</div>');
+        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    	$("#dialogBox").append('<div class="mensagem_recebida">YOU DIEEEE!!</div>');
     	$("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
     }
 }

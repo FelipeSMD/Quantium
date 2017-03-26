@@ -283,7 +283,7 @@ button:focus {
 
 #mensagens {
 	width: 100%;
-	height: 62%;
+	height: 36%;
 	position: relative;
 	overflow-y: auto;
 	background-image: url('../imagens/background_celular.png');

@@ -384,7 +384,7 @@ function doSetTimeOut(i) {
 function carregarContatos() {
 	document.getElementById('tweets').style.display = 'none';
 	document.getElementById('avatar_jogador_mapa').style.display = 'none';
-	window.location.href = 'contatos.html';
+	window.location.href = 'telaCientista.html';
 }
 
 function carregarTutorialContatos1() {

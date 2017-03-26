@@ -32,14 +32,12 @@
 
 .mensagem_recebida{
 	position: relative;
-	background-color: #8FBC8F;
+	background-color: #fcfcfc;
 	color: black;
 	border-radius: 5px;
-	min-width: 5px;
-	max-width: 220px;
+	width: 210px;
 	min-height: 20px;
 	margin-top: 5px;
-	overflow-x: hidden;
 }
 
 .mensagem_enviada{
@@ -47,8 +45,7 @@
 	color: black;
 	background-color: #98FB98;
 	border-radius: 5px;
-	min-width: 1px;
-	max-width: 220px;
+	width: 210px;
 	min-height: 20px;
 	left: 20px;
 	margin-top: 5px;
@@ -61,10 +58,11 @@ div{
 
 #dialogBox{
 	color: #fcfcfc;
+	background-image: url(../imagens/background_celular.png);
 	position: absolute;
 	font-size: 12px;
-	width: 250px;
-	height: 130px;
+	width: 248px;
+	height: 140px;
 	left: 250px;
 	top: 200px;
 	overflow-y: auto;
@@ -104,7 +102,7 @@ div{
 	color: white;
 	margin-left: 255px;
 	top: 360px;
-	width: 50px;
+	width: 53px;
 	height: 20px;
 	cursor: pointer;
 	border-radius: 3px;
@@ -151,11 +149,12 @@ div{
 
 #borda{
 	position: absolute;
-	border:1px solid #aaaaaa;
-	margin-left: 248px;
+	margin-left: 250px;
+	margin-top: 12px;
 	top: 330px;
-	width: 250px;
-	height: 25px;
+	width: 248px;
+	height: 40px;
+	background-color: #fcfcfc;
 }
 
 #botoes{
@@ -238,3 +237,15 @@ div{
 	font-family: "Ubuntu";
 }
 
+#socialBox{
+	position: absolute;
+	margin-top: 175px;
+	margin-left: 330px;
+}
+
+#instrucao{
+	position: absolute;
+	margin-top: 295px;
+	margin-left: 450px;
+	z-index: 2;
+}
