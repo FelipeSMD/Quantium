@@ -38,6 +38,8 @@
 	width: 210px;
 	min-height: 20px;
 	margin-top: 5px;
+	font-family: "Ubuntu";
+	font-size: 14px;
 }
 
 .mensagem_enviada{
@@ -49,6 +51,8 @@
 	min-height: 20px;
 	left: 20px;
 	margin-top: 5px;
+	font-family: "Ubuntu";
+	font-size: 14px;
 }
 
 div{
@@ -246,6 +250,6 @@ div{
 #instrucao{
 	position: absolute;
 	margin-top: 295px;
-	margin-left: 450px;
+	margin-left: 480px;
 	z-index: 2;
 }

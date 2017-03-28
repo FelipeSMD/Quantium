@@ -23,9 +23,7 @@ function enviar(){
 		$("#dialogBox").append('<div class="mensagem_enviada">Sim</div>');
     	$("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
         setInterval(function () {
-            localStorage.setItem("primeiraVez", false);
-            localStorage.setItem("bibliotecaAtacada", false);
-            localStorage.setItem("hospitalDesbloqueado", true);
+            localStorage.setItem("primeiraVez", true);
             window.location.href = 'contatos.html';
         }, 900);
     }else if(resp == "Não"){
@@ -43,6 +41,10 @@ function resetar(){
 
 function resposta(id){
 	document.getElementById("borda").innerHTML = document.getElementById(id).innerHTML;
+}
+
+function someImagemOver(id){
+    document.getElementById(id).style.display= "none";
 }
 /*document.getElementById("textoCompleto").innerHTML = textoDialogo;
 

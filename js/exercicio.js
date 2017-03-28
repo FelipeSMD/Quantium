@@ -62,7 +62,7 @@
 				$("#text").append('<strong><span id="espaco23">____</span></strong> ');	
 				$("#text").append('<strong><span id="espaco24">____</span></strong> na biblioteca ');	
 				$("#text").append('<strong><span id="espaco25">____</span></strong> ');	
-				$("#text").append('<strong><span id="espaco26">____</span></strong> um antibiótico ');
+				$("#text").append('<strong><span id="espaco26">____</span></strong> 1 antibiótico ');
 				$("#text").append('<strong><span id="espaco27">____</span></strong> a cura dos infectados.');	
 				$("#text").append('<strong><span id="espaco28">____</span></strong> ');	
 				$("#text").append('<strong><span id="espaco29">____</span></strong> me ajudar?');	
@@ -300,7 +300,7 @@
 							return;
 					} else if(internetesCount < 2){
 						aumentarTermometro();
-						$("#mensagens").append('<p class="mensagem_recebida">Ops! Mlr usar o internetês, ein? Vc tem pouco tempo!</p');
+						$("#mensagens").append('<p class="mensagem_recebida">Ops! Mlr usa o internetês, ein? Vc tem pouco tempo!</p');
 						return;
 					}
 
