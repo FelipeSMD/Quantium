@@ -27,7 +27,7 @@ function enviar(){
             window.location.href = 'contatos.html';
         }, 900);
     }else if(resp == "Não"){
-    	document.getElementById("termometro").src = "imagens/termometro8.png";
+    	document.getElementById("termometro").src = "imagens/Radar_8.png";
         $("#dialogBox").append('<div class="mensagem_enviada">Não</div>');
         $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
     	$("#dialogBox").append('<div class="mensagem_recebida">YOU DIEEEE!!</div>');

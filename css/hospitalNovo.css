@@ -537,7 +537,7 @@ button:focus {
 	height: 88px;
 	color: white;
 	font-size: 20px;
-	font-family: "Ubuntu";
+	font-family: "Courier";
 	background-image: url(../imagens/balao.png);
 	margin-top: 480px;
 	margin-left: 35px;
@@ -586,22 +586,22 @@ button:focus {
 
 #textoCompleto{
 	display: none;
-	font-family: "Ubuntu";
+	font-family: "Courier";
 }
 
 #textoAndamento1{
-	font-family: "Ubuntu";
+	font-family: "Courier";
 }
 
 #textoAndamento2{
 	display: none;
-	font-family: "Ubuntu";
+	font-family: "Courier";
 }
 
 #divbuttons{
 	overflow: scroll;
 	overflow-x: hidden;
-	height: 86px;
+	height: 70px;
 }
 
 #mensagens{
@@ -637,7 +637,8 @@ button:focus {
     float: right;
     margin-right: 2%;
     margin-top: 2%;
-    background-image: url(../imagens/termometro0.png);
+    background-image: url(../imagens/Radar_0.png);
+    background-size: 100px 100px;
 }
 
 .replace{

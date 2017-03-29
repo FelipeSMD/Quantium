@@ -348,7 +348,7 @@
 
 
 	function aumentarTermometro(){
-		var url = "url('imagens/termometro"
+		var url = "url('imagens/Radar_"
 		if(termometroCount < 8){
 			termometroCount += 1;
 			document.getElementById("termometro").style.backgroundImage = url + termometroCount + ".png')";
