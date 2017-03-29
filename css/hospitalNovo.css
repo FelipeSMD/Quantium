@@ -31,6 +31,30 @@
 	cursor: pointer;
 }
 
+#celular {
+	position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 14%;
+	width: 444px;
+	height: 501px;
+    background-image: url("../imagens/celular.png");
+	margin: auto;
+}
+
+.celular_content {
+	position: absolute;
+	width: 56.2%;
+	height: 77.7%;
+	background-color: #fcfcfc;
+	top: 7%;
+	left: 28.9%;
+	border-style: solid;
+    border-width: 1px;
+    border-color: #8493A8;
+}
+
+
 .mensagem_recebida{
 	position: relative;
 	background-color: #8FBC8F;
@@ -41,6 +65,9 @@
 	min-height: 20px;
 	margin-top: 5px;
 	overflow-x: hidden;
+	font-family: "Ubuntu";
+	font-size: 14px;
+	padding: 3px;
 }
 
 .mensagem_enviada{
@@ -53,21 +80,157 @@
 	min-height: 20px;
 	left: 20px;
 	margin-top: 5px;
+	font-family: "Ubuntu";
+	font-size:14px;
+	padding: 3px;
 }
 
-div{
-	left: 0;
-	top:0; 
+/* Parte que o Nathan modificou */
+
+.contato {
+	width: 100%;
+	height: 15.8%;
+	background-color: #2aa089;
+	border-bottom: 1px solid #8493A8;
+	margin: 0% 0% 0.9% 0%;
+    cursor: pointer;
 }
+
+.avatar_contato{
+	margin: 2% 0% 0% 6%;
+}
+
+.info_contato {
+	float: right;
+	width: 65%;
+	margin-top: 2.2%;
+	margin-right: 2%;
+
+}
+
+.info_contato img {
+	margin-top: 1%;
+}
+
+.nome_contato {
+	font-size: 73%;
+	font-family: "Ubuntu-Bold";
+	font-weight: bold;
+	margin-bottom: 1.5%;
+}
+
+.status_contato {
+	font-size: 60%;
+	font-family: "Ubuntu-Medium-Italic";
+	margin-bottom: 1.5%;
+}
+
+#btn_voltar {
+	width: 13px;
+	height: 30px;
+    background-image: url(../imagens/botao_voltar.png);
+}
+
+#btn_voltar:hover {
+    background-image: url(../imagens/botao_voltarON.png);
+}
+
+.botao_voltar{
+	position: absolute;
+	float: left;
+	top: 4%;
+	cursor: pointer;
+}
+
+#celular_footer {
+	background-color: #2aa089;
+	width: 99.7%;
+	height: 47.6%;
+	position: absolute;
+	
+    bottom: 0;
+    left: -0.2%;
+}
+
+#text {
+	margin: 0;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#divsend {
+	background-color: #fcfcfc;
+	overflow: auto;
+}
+
+#delete {
+	float:left;
+	background-color: #2aa089;
+}
+
+#send {
+	float:right;
+	background-color: #2aa089
+}
+
+button {
+	background-color: #2aa089; 
+    border:none;
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: white;
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 0% 1% 0%;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+}
+
+button:hover {
+	background-color: #4C6283; 
+    border:none;
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: #8493A8;
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: #8493A8;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 0% 1% 0%;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+#celular_mensagens {
+	margin:0;
+	background-color:#fcfcfc;
+	padding: 0% 1% 0% 1%;
+}
+
+/* Fim da parte do Nathan */
 
 #dialogBox{
 	color: #fcfcfc;
 	position: absolute;
 	font-size: 12px;
 	width: 250px;
-	height: 130px;
-	left: 250px;
-	top: 200px;
+	height: 140px;
+	left: 249px;
+	top: 197px;
 	overflow-y: auto;
 	background-image: url('../imagens/background_celular.png');
 }
@@ -374,7 +537,7 @@ div{
 	height: 88px;
 	color: white;
 	font-size: 20px;
-	font-family: "Courier";
+	font-family: "Ubuntu";
 	background-image: url(../imagens/balao.png);
 	margin-top: 480px;
 	margin-left: 35px;
@@ -423,15 +586,74 @@ div{
 
 #textoCompleto{
 	display: none;
-	font-family: "Courier";
+	font-family: "Ubuntu";
 }
 
 #textoAndamento1{
-	font-family: "Courier";
+	font-family: "Ubuntu";
 }
 
 #textoAndamento2{
 	display: none;
-	font-family: "Courier";
+	font-family: "Ubuntu";
 }
+
+#divbuttons{
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 86px;
+}
+
+#mensagens{
+	width: 100%;
+    height: 36%;
+    position: relative;
+    overflow-y: auto;
+    background-image: url(../imagens/background_celular.png);
+    z-index: 0;
+}
+
+.mensagem_enviada{
+	margin: 2% 2% 2% 8%;
+    background-color: #98FB98;
+    border-radius: 7px;
+    padding: 1% 1% 1% 1%;
+    position: relative;
+    max-width: 80%;
+}
+
+.mensagem_recebida{
+	margin: 2% 10% 2% 2%;
+    background-color: #fcfcfc;
+    border-radius: 7px;
+    padding: 1% 1% 1% 1%;
+    position: relative;
+    max-width: 80%;
+}
+
+#termometro {
+	width: 100px;
+    height: 100px;
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+    background-image: url(../imagens/termometro0.png);
+}
+
+.replace{
+	color: #777;
+	font-family: "Ubuntu";
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.replaced {
+	color: #000;
+	font-family: "Ubuntu";
+    font-size: 15px;
+}
+
+
+
+
 

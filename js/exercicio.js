@@ -178,6 +178,7 @@
 				count ++;
 				
 				$("#espaco"+countMensage+count).text($(this).text());               
+				console.log($("#espaco"+countMensage+count)); 
 				countInternetes(buttonOptionArray);
 			}
 			
