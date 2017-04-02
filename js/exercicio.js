@@ -8,7 +8,7 @@
 	var contadorProvisorio = 0;
 	var testPlace = [];
 	var termometroCount = 0;
-	
+	var acertouTudo=true;
 	function buttonOptions(text, internetes, place){
 		this.text = text;
 		this.internetes = internetes;
@@ -269,8 +269,10 @@
 				if(internetesCount < 1){
 					//alert("Muito internetes");
 					aumentarTermometro();
-					$("#mensagens").append('<p class="mensagem_recebida">N temos mto tempo! Use o internetês!</p');
-					return;
+					sendMessage();
+					acertouTudo = false;
+					document.getElementById("termometro").className = "highlight";
+					setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
 				}
 				break;
 				case 2:
@@ -286,11 +288,32 @@
 							aumentarTermometro();
 							$("#mensagens").append('<p class="mensagem_recebida">N entendi.</p');
 							return;						
-					} else if (internetesCount < 9){
+					} else if (internetesCount < 2){
 						//alert("Muito internetes");
 						aumentarTermometro();
-						$("#mensagens").append('<p class="mensagem_recebida">Ops! Mlr usar o internetês, ein? Vc tem pouco tempo!</p');
-						return;
+						aumentarTermometro();
+						aumentarTermometro();
+						sendMessage();
+						acertouTudo = false;
+						document.getElementById("termometro").className = "highlight";
+						setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
+					}
+					else if (internetesCount < 6){
+						//alert("Muito internetes");
+						aumentarTermometro();
+						aumentarTermometro();
+						sendMessage();
+						acertouTudo = false;
+						document.getElementById("termometro").className = "highlight";
+						setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
+					}
+					else if (internetesCount < 9){
+						//alert("Muito internetes");
+						aumentarTermometro();
+						sendMessage();
+						acertouTudo = false;
+						document.getElementById("termometro").className = "highlight";
+						setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
 					}
 				break;
 				case 3:				
@@ -299,12 +322,21 @@
 							aumentarTermometro();
 							$("#mensagens").append('<p class="mensagem_recebida">N entendi.</p');
 							return;
-					} else if(internetesCount < 2){
+					} else if(internetesCount < 1){
 						aumentarTermometro();
-						$("#mensagens").append('<p class="mensagem_recebida">Ops! Mlr usa o internetês, ein? Vc tem pouco tempo!</p');
-						return;
+						aumentarTermometro();
+						sendMessage();
+						acertouTudo = false;
+						document.getElementById("termometro").className = "highlight";
+						setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
 					}
-
+					else if(internetesCount < 2){
+						aumentarTermometro();
+						sendMessage();
+						acertouTudo = false;
+						document.getElementById("termometro").className = "highlight";
+						setInterval(function(){document.getElementById("termometro").className = "none";}, 1000);
+					}
 				break;
 			}
 
@@ -312,8 +344,13 @@
 			console.log("palavras internetes = " + internetesCount);
 
 			console.log("count = " + count);
+			
+			if (acertouTudo) {
+				sendMessage();
+				acertouTudo = true;
 
-			sendMessage();
+			};
+			
 			//clearContainer();
 
 			count = 0;
@@ -330,7 +367,7 @@
 			switchMessage(countMensage);
 		
 			selectMessage(buttonOptionArray);
-		
+			
 			countOptions = $("#text span").length;
 
 
