@@ -40,9 +40,6 @@
 	margin-top: 5px;
 	font-family: "Ubuntu";
 	font-size: 14px;
-	width: fit-content ;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
 }
 
 .mensagem_enviada{
@@ -143,15 +140,15 @@ div{
 
 #nomeContato{
 	position: absolute;
-	margin-top: 130px;
+	margin-top: 140px;
 	margin-left: 330px;
-	font-size: 14px;
+	font-size: 13px;
 	font-style: bold;
 }
 
 #status{
 	position: absolute;
-	margin-top: 150px;
+	margin-top: 155px;
 	margin-left: 330px;
 	font-size: 11px;
 	font-style: italic;
@@ -259,4 +256,17 @@ div{
 	margin-top: 295px;
 	margin-left: 480px;
 	z-index: 2;
+}
+
+.nome_contato {
+	font-size: 73%;
+	font-family: "Ubuntu-Bold";
+	font-weight: bold;
+	margin-bottom: 1.5%;
+}
+
+.status_contato {
+	font-size: 60%;
+	font-family: "Ubuntu-Medium-Italic";
+	margin-bottom: 1.5%;
 }

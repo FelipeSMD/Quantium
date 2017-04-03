@@ -5,8 +5,11 @@
 	<meta charset="utf-8"/>
 
 	
-	<script type="text/javascript" src="lib/jquery-2.1.4.min.js" DEFER></script>
-	<script type="text/javascript" src="lib/jquery-ui.js" DEFER></script>
+	<script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-ui.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript" src="lib/jquery.elevatezoom.js"></script>
+	<script type="text/javascript" src="lib/jquery.elevateZoom-3.0.8.min.js"></script>
 	<script type="text/javascript" src="js/functions.js" DEFER></script>
 	<script type="text/javascript" src="js/hospitalNovo.js" DEFER></script>
 	<script type="text/javascript" src="js/inventario.js" DEFER></script>
@@ -18,12 +21,10 @@
 </head>
 
 <body>
-	<img id="bg" src= "imagens/background_lab.png">
+	<div id="bg"></div>
 	<img id="ajuda"  src= "imagens/ajuda.png">
 	<img id="inventario_bt" src='imagens/icon_avatarM1.png' onclick="abreFechaInventario()">
-	<img id="celular" src= "imagens/celular.png">
 	<div id="termometro"></div>
-	<div id="contatoBox"> </div>
 	<!--Interação por meio de clique-->
 	<div id="celular">
 		<div class="celular_content" id="telaExercicio">
@@ -52,11 +53,20 @@
 					<button id="delete">Apagar!</button>
 					<button id="send">Enviar!</button>
 				</div>
-				
-				<div id="divbuttons">
+				<div id="options">
+				<button class="pageButtons" id="leftPage">&#8249;</button>
+				<div class="divbuttons" id="divbuttons1">
+				</div>
+				<div class="divbuttons" id="divbuttons2">
+				</div>
+				<div class="divbuttons" id="divbuttons3">
+				</div>
+				<div class="divbuttons" id="divbuttons4">
+				</div>
+				<button class="pageButtons" id="rightPage">&#8250;</button>
 				</div>
 			</div>
-			
+			<div id="videoConf5" style="display: none;"></div>
 		</div>
 	</div>
 	
@@ -82,11 +92,6 @@
 			<img id="imagemCentral" onclick="mudaImagem()" src="imagens/hemograma_cel.png">
 		</div>
 	</div>
-	
-
-		
-	
-
 </body>
 
 </html>

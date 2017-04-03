@@ -15,7 +15,7 @@ var finalTutorial = false;
 
     perguntaAtual[0] = "Nossa! Estamos sabendo do ocorrido! Diga-me como posso ajudá-lo?";
     perguntaAtual[1] = "Entendi. Posso fazer isso para você.";
-    perguntaAtual[2] = "<img src=\'imagens/hemogramaicon.png\' onclick=\'susto()\'>";
+    perguntaAtual[2] = "<img id=\"hemograma\" src=\"hemogramaicon.png\" data-zoom-image=\"Zumbi_Aparecendo.png\"/>";
 
 /* Teste de interação */
 
@@ -51,7 +51,19 @@ function buttonOptions(text, booleano, place){
 } 
 
 function addButtonOption (buttonOption, count){
-    $("#divbuttons").append('<button class="button-option" id="button-option"'+countMensage+count+'>' + buttonOption.text + '</button>');
+    if(count < 3){
+        page = 1;
+    } else if ( count < 6){
+        if( countMensage == 3)
+            page = 1;
+        else
+            page = 2;
+    } else if (count < 9){
+        page = 3;
+    } else {
+        page = 4;
+    }
+    $("#divbuttons"+page).append('<button class="button-option" id="button-option'+countMensage+count+'">' + buttonOption.text + '</button>');
     $("#button-option"+countMensage+count).text(buttonOption.text);
 }
 
@@ -65,18 +77,26 @@ function switchMessage (count) {
     switch (count){
         case 1:
             $("#text").empty();
-            $("#divbuttons").empty();
+            $("#divbuttons1").empty();
+            $("#divbuttons2").empty();
+            $("#divbuttons3").empty();
+            $("#divbuttons4").empty();
+            $("#divbuttons1").css("display","inline-block");
+            $("#divbuttons2").css("display","none");
+            $("#divbuttons3").css("display","none");
+            $("#divbuttons4").css("display","none");  
+            msgCount=1;          
             buttonOptionArray = [];
-            $("#text").append('<span class="replace" id="espaco11">|Oi, <font size="5">&#x1F44D;</font> </span> ');
+            $("#text").append('<span class="replace" id="espaco11">|Oi, <img src=\'imagens/emoji_thumbsup.png\'/>  ');
             $("#text").append('<span class="replace" id="espaco12">|preciso fzr </span>');
             $("#text").append('<span class="replace" id="espaco13">|1 antibiotico </span>');
             $("#text").append('<span class="replace" id="espaco14">|pq 1 bacteria </span>');
-            $("#text").append('<span class="replace" id="espaco15">|tomou conta <font size="5">&#x1F306;</font> </span>');
+            $("#text").append('<span class="replace" id="espaco15">|tomou conta <img src=\'imagens/emoji_cidade.png\'> </span>');
             $("#text").append('<span class="replace" id="espaco16">|Vc pde me ajudar? </span>');
         
             var buttonOption11 = new buttonOptions("Olá, como vai? ", true, 1);
-            var buttonOption12 = new buttonOptions("eae blz ", false, 1);
-            var buttonOption13 = new buttonOptions("#precisoPOntemDe ", false, 2);
+            var buttonOption12 = new buttonOptions("eae blz? ", false, 1);
+            var buttonOption13 = new buttonOptions("#preciso_p/_ontem de ", false, 2);
             var buttonOption14 = new buttonOptions("Preciso fazer ", true, 2);
             var buttonOption15 = new buttonOptions("1 remedio ", false, 3);
             var buttonOption16 = new buttonOptions("um antibiótico ", true, 3);
@@ -103,15 +123,23 @@ function switchMessage (count) {
         break;
         case 2:
             $("#text").empty();
-            $("#divbuttons").empty();
+            $("#divbuttons1").empty();
+            $("#divbuttons2").empty();
+            $("#divbuttons3").empty();
+            $("#divbuttons4").empty();
+            $("#divbuttons1").css("display","inline-block");
+            $("#divbuttons2").css("display","none");
+            $("#divbuttons3").css("display","none");
+            $("#divbuttons4").css("display","none");  
+            msgCount=1;          
             buttonOptionArray = [];
 
             $("#text").append('<span class="replace" id="espaco21">|Gost q vc </span>');
             $("#text").append('<span class="replace" id="espaco22">|enviasse 1 ezame </span>');
             $("#text").append('<span class="replace" id="espaco23">|c a txa </span>');
             $("#text").append('<span class="replace" id="espaco24">|d leucocitos </span>');
-            $("#text").append('<span class="replace" id="espaco25">|d 1a pssoa d 14anos </span>');
-            $("#text").append('<span class="replace" id="espaco26">|infectda. </span>');  
+            $("#text").append('<span class="replace" id="espaco25">|d 1a pssoa </span>');
+            $("#text").append('<span class="replace" id="espaco26">|d 14anos infectda. </span>');  
                 
 
             var buttonOption21 = new buttonOptions("Gostaria que você ", true, 1);
@@ -122,10 +150,10 @@ function switchMessage (count) {
             var buttonOption26 = new buttonOptions("com a taxa ", true, 3);
             var buttonOption27 = new buttonOptions("de leucócitos ", true, 4);
             var buttonOption28 = new buttonOptions("d lewcositus ", false, 4);
-            var buttonOption29 = new buttonOptions("de uma pessoa de 14 anos ", true, 5);       
-            var buttonOption210 = new buttonOptions("d una pesoa c 14anos ", false, 5);
-            var buttonOption211 = new buttonOptions("duente ", false, 6);
-            var buttonOption212 = new buttonOptions("infectada ", true, 6);
+            var buttonOption29 = new buttonOptions("de uma pessoa ", true, 5);       
+            var buttonOption210 = new buttonOptions("d una pesoa ", false, 5);
+            var buttonOption211 = new buttonOptions(" c 14anos duente ", false, 6);
+            var buttonOption212 = new buttonOptions(" de 14 anos infectada ", true, 6);
 
             buttonOptionArray = [   buttonOption21, 
                                     buttonOption22, 
@@ -144,7 +172,15 @@ function switchMessage (count) {
 
         case 3:
             $("#text").empty();
-            $("#divbuttons").empty();
+            $("#divbuttons1").empty();
+            $("#divbuttons2").empty();
+            $("#divbuttons3").empty();
+            $("#divbuttons4").empty();
+            $("#divbuttons1").css("display","inline-block");
+            $("#divbuttons2").css("display","none");
+            $("#divbuttons3").css("display","none");
+            $("#divbuttons4").css("display","none");
+            msgCount=1;
             buttonOptionArray = [];
 
             $("#text").append('<span class="replace" id="espaco31">|td bem </span>');
@@ -174,7 +210,7 @@ function switchMessage (count) {
                 $("#mensagens").append('<p class="mensagem_recebida">Entendi. Posso fazer isso para você.</p');
             break;
             case 3:
-                $("#mensagens").append('<div class="mensagem_recebida"><img src=\'imagens/hemogramaicon.png\' onclick=\'susto()\'</div>');
+                $("#mensagens").append('<div class="mensagem_recebida"><img id=\"hemogramaZoom\" src=\"imagens/hemogramaicon.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>');
             break;
         }       
     }
@@ -187,7 +223,7 @@ function switchMessage (count) {
                     testPlace[count] = buttonOptionArray[i].place;
                 break;
             }
-        }       
+        }      
     }
     
 
@@ -218,15 +254,8 @@ function switchMessage (count) {
         });
     }
 
-
-
-
-
-
     /* Jquery com as verificações */
     $(document).ready(function(){
-
-
         
         switchMessage(countMensage);
         
@@ -234,7 +263,7 @@ function switchMessage (count) {
 
         countOptions = $("#text span").length;
         
-        
+        msgCount=1;
         //console.log(countOptions);
         
         testClick();
@@ -252,7 +281,25 @@ function switchMessage (count) {
            
             
         });
-        
+
+        $("#leftPage").click(function(){
+            if(countMensage != 3)
+            if(msgCount>1){
+                $("#divbuttons"+msgCount).css("display","none");
+                $("#divbuttons"+(msgCount-1)).css("display","inline-block");
+                msgCount--;
+            }
+        });
+
+        $("#rightPage").click(function(){  
+            if(countMensage != 3)
+            if(msgCount<4){
+                $("#divbuttons"+msgCount).css("display","none");
+                $("#divbuttons"+(msgCount+1)).css("display","inline-block");
+                msgCount++;
+            }
+
+        });
         
         $("#send").click(function(){
 
@@ -262,7 +309,6 @@ function switchMessage (count) {
             
             if(buttonArray.length < countOptions + 1){
                     alert("complete todas as palavras");
-                    console.log(buttonArray);
                     return;
                 }
             
@@ -319,11 +365,6 @@ function switchMessage (count) {
                 break;
             }
 
-            console.log(buttonArray);
-            console.log("palavras acertos = " + acertosCount);
-
-            console.log("count = " + count);
-
             sendMessage();
             //clearContainer();
 
@@ -347,11 +388,12 @@ function switchMessage (count) {
 
 
             testClick();
+            /*
             contadorProvisorio++;
             if(contadorProvisorio>2){
                 setTimeout(carregarTelaObrigado, 3000);
             }
-            
+            */
         });
 
     });
@@ -360,10 +402,41 @@ function switchMessage (count) {
 
 /* fim do código do teste de interação */
 
-function susto(){
-    abreFechaInventario();
+function zoom(){
+    $("#mensagens").empty();
+    $("#text").empty();
+    $("#options").empty();
+    $("#mensagens").append('<div class="mensagem_recebida"><img id=\"hemogramaZoom\" src=\"imagens/hemogramaicon.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>');
+    $("#hemogramaZoom").elevateZoom({
+        zoomType: "inner",
+        cursor: "crosshair",
+        easing : true
+    });
+    $("body").mousemove(function( event ) {
+        if(event.pageX > 400 && event.pageX < 425)
+            if(event.pageY > 300 && event.pageY < 325){
+                $( "body" ).off( "mousemove");
+                $("#hemogramaZoom").data("zoom-image","imagens/conf5.png").elevateZoom({
+                    zoomType: "inner",
+                    cursor: "crosshair",
+                    easing : true
+                });
+                   window.setTimeout(susto, 1000);
+            }
+    });
     mudaImagem("hemograma_cel");
 }
+
+function susto(){
+    $("#mensagens").empty();
+    $("#mensagens").append('<p class="mensagem_recebida">Baltazar Boaventura se desconectou.</p>');
+    $("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
+    window.setTimeout(carregarContatos,2000);
+}
+
+    function carregarContatos() {
+        window.location.href = "contatos.html";
+    }
 
 insertFirstMessage();
 
@@ -437,6 +510,21 @@ function acelerarTexto(){
             termometroCount += 1;
             document.getElementById("termometro").style.backgroundImage = url + termometroCount + ".png')";
         } else {
-            alert("game over");
+            gameover();
         }
     }
+
+    function gameover(){
+        $("#telaExercicio").hide();
+        $("#celular").animate({
+            opacity: 0.4,
+            height: "-=50%",
+            marginTop: "+=40%"
+        }, 2000,function(){
+            $(this).hide();
+            $("#inventario_bt").hide();
+            $("#termometro").hide();
+            $("#ajuda").hide();
+        });
+        $('#bg').addClass('gameover');
+}
