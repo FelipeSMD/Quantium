@@ -4,7 +4,7 @@ var finalTutorial = false;
 
 insertFirstMessage();
  function insertFirstMessage(){
-    $("#dialogBox").append('<div class="mensagem_recebida">Socorro,'+ localStorage.getItem("nomeJogador")+'. Não posso sair de casa ou vou me infectar.</div>');
+    $("#dialogBox").append('<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>');
     $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
 
     $("#dialogBox").append('<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>');

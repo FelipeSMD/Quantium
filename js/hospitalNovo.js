@@ -4,7 +4,7 @@ var respostaAtual = [];
 var perguntaAtual = [];
 var contResp = 0;
 var contPerg = 0;
-var textoDialogo = "O enfermeiro Baltazar Boaventura não está em nenhuma rede social e utiliza frequentemente a linguagem formal em seus diálogos.";
+var textoDialogo = "O enfermeiro Baltazar Boaventura não está em nenhuma rede social e utiliza, frequentemente, a norma culta.";
 var primeiraVez = 0;
 var finalTutorial = false;
 
@@ -485,7 +485,7 @@ function acelerarTexto(){
     }else if(primeiraVez == 1){
         primeiraVez = 0;
         finalTutorial = true;
-        textoDialogo = "Nesse ambiente, a conversa será realizada por meio do internetês para a linguagem formal e, em alguns momentos, de palavras usadas erroneamente no cotidiano para a linguagem formal."
+        textoDialogo = "Nesse ambiente, você precisa traduzir as mensagens do internetês para a norma culta. Clique nas frases e expressões para traduzir as mensagens."
         typeWritter(textoDialogo,"textoAndamento2",100);
         document.getElementById("textoAndamento1").style.display="none";
         document.getElementById("textoAndamento2").style.display="block";
