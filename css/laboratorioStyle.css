@@ -286,6 +286,7 @@ button:focus {
 }
 
 .mensagem_enviada {
+	float: right;
 	margin: 2% 2% 2% 15%;
 	background-color:#98FB98;
 	border-radius: 7px;
@@ -298,6 +299,7 @@ button:focus {
 }
 
 .mensagem_recebida {
+	clear: both;
 	margin: 2% 10% 2% 2%;
 	background-color:#fcfcfc;
 	border-radius: 7px;
@@ -426,6 +428,7 @@ button:focus {
 }
 
 #termometro{
+	position: relative;
 	width:100px;
 	height:100px;
 	float:right;
@@ -435,6 +438,32 @@ button:focus {
 	background-size: 100px 100px;
 }
 
+.spinner{
+	position: absolute;
+	transform-origin:0 0;
+	left: 50px;
+	top: 50px; 
+	width: 40px;
+	height: 44.5px;
+	-webkit-animation: scan 5s linear infinite;
+	animation: scan 5s linear infinite;
+	background: linear-gradient(-310deg, #fafafa 0%, transparent 49%);
+	border-radius: 0 0 120px 0; 
+	z-index: 999;
+}
+#gambiarra_spinner{
+	left: 734px;
+	top: 66px;
+}
+
+@keyframes scan {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(70deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(430deg);
+  }
+}
 .highlight{
 	border-radius: 50%;
 	-webkit-box-shadow: 0px 2px 100px 18px rgba(222, 255, 0, 0.5); 
@@ -443,15 +472,16 @@ button:focus {
 }
 
 #termometro_highlight{
+	position: relative;
 	width:100px;
 	height:100px;
 	float:right;
+	margin-top: 2%;
+	margin-right: 2%;
 	background-image: url('../imagens/Radar_0.png');
 	background-size: 100px 100px;
 	border-radius: 50%;
-	position: absolute;
-	left:84.5%;
-	top:1.8%;
+	
 
 	-webkit-box-shadow: 0px 2px 100px 18px rgba(222, 255, 0, 0.5); 
 	-moz-box-shadow:0px 2px 100px 18px rgba(222, 255, 0, 0.5);

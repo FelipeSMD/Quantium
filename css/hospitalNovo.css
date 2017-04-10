@@ -56,6 +56,8 @@
 
 
 .mensagem_recebida{
+	width: fit-content;
+	height: fit-content;
 	position: relative;
 	background-color: #8FBC8F;
 	color: black;
@@ -71,6 +73,8 @@
 }
 
 .mensagem_enviada{
+	width: fit-content;
+	height: fit-content;
 	position: relative;
 	color: black;
 	background-color: #98FB98;
@@ -647,7 +651,28 @@ button:focus {
     background-image: url(../imagens/Radar_0.png);
     background-size: 100px 100px;
 }
+.spinner{
+	position: absolute;
+	transform-origin:0 0;
+	left: 50px;
+	top: 50px; 
+	width: 40px;
+	height: 44.5px;
+	-webkit-animation: scan 5s linear infinite;
+	animation: scan 5s linear infinite;
+	background: linear-gradient(-310deg, #fafafa 0%, transparent 49%);
+	border-radius: 0 0 120px 0; 
+	z-index: 999;
+}
 
+@keyframes scan {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(70deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(430deg);
+  }
+}
 .replace{
 	color: #777;
 	font-family: "Ubuntu";

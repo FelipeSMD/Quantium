@@ -89,11 +89,37 @@ div{
 	height: 501px;
 	margin-left: 120px; 
 }
+#radar{
+	position: relative;
+	margin-top: 15px;
+	left: 680px;
+}
+#spinner{
+	position: absolute;
+	transform-origin:0 0;
+	left: 50px;
+	margin-top: 50px; 
+	width: 40px;
+	height: 44px;
+	-webkit-animation: scan 5s linear infinite;
+	animation: scan 5s linear infinite;
+	background: linear-gradient(-310deg, #fafafa 0%, transparent 49%);
+	border-radius: 0 0 120px 0; 
+}
+
+@keyframes scan {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(70deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(430deg);
+  }
+}
+
 
 #termometro{
 	position: absolute;
-	margin-top: 15px;
-	left: 680px;
+	
 	width: 100px;
 }
 
