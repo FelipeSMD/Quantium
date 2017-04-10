@@ -74,8 +74,8 @@ function fraseCompleta() {
 		acelerar();
 	}
 	if(novaDiv.id == "texto6") {
-		document.getElementById('main').style.webkitFilter = "brightness(100%)";
-		document.getElementById('main').style.filter = "brightness(100%)";
+		document.getElementById('bg').style.webkitFilter = "brightness(100%)";
+		document.getElementById('bg').style.filter = "brightness(100%)";
 	}
 }
 
@@ -261,8 +261,8 @@ function acelerar() {
 				carregarTweets();
 				break;
 			case 'texto6':
-				document.getElementById('main').style.webkitFilter = "brightness(100%)";
-				document.getElementById('main').style.filter = "brightness(100%)";
+				document.getElementById('bg').style.webkitFilter = "brightness(100%)";
+				document.getElementById('bg').style.filter = "brightness(100%)";
 				carregarTutorialContatos2();
 				break;
 			case 'texto7':
@@ -317,7 +317,8 @@ function carregarMenu() {
 	} else {
 		var nome = document.getElementById('nome_jogador').value;
 		localStorage.setItem("nomeJogador", nome);
-		localStorage.setItem("avatar_selecionado", avatar_position);
+		localStorage.setItem("gambiarra", avatar_position);
+		localStorage.setItem("inventario_bt", avatar_position);
 		if(avatar_position == 0 || avatar_position == 1) {
 			localStorage.setItem("generoJogador", "f");
 		} else {
@@ -388,12 +389,13 @@ function carregarContatos() {
 }
 
 function carregarTutorialContatos1() {
-	document.getElementById('avatar_selecionado').style.backgroundImage = 'url("' + avatar_icons[localStorage.getItem('avatar_selecionado')] + '")';
+	//document.getElementById('inventario_bt').src = avatar_icons[localStorage.getItem('inventario_bt')];
+	document.getElementById('gambiarra').src=  avatar_icons[localStorage.getItem('gambiarra')];
 	var i = localStorage.getItem("primeiraVez");
 	if(i == 'true') {
 		document.getElementById('balao').style.display = 'block';
-		document.getElementById('main').style.webkitFilter = "brightness(30%)";
-		document.getElementById('main').style.filter = "brightness(30%)";
+		document.getElementById('bg').style.webkitFilter = "brightness(30%)";
+		document.getElementById('bg').style.filter = "brightness(30%)";
 		$("#contato1").addClass("contatoDestacado");
 		document.getElementById('contato1').onclick = null;
 		criarDiv('texto6', true);
@@ -457,7 +459,8 @@ function setaDireitaClicked() {
 }
 
 function carregarTutorialBiblioteca1() {
-	document.getElementById('avatar_selecionado').style.backgroundImage = 'url("' + avatar_icons[localStorage.getItem('avatar_selecionado')] + '")';
+	//document.getElementById('inventario_bt').src =  avatar_icons[localStorage.getItem('inventario_bt')] ;
+	document.getElementById('gambiarra').src =   avatar_icons[localStorage.getItem('gambiarra')] ;
 	var i = localStorage.getItem("primeiraVez");
 	var j = localStorage.getItem("bibliotecaAtacada");
 	if(i == 'true') {
@@ -513,7 +516,8 @@ function comecarJogo() {
 }
 
 function carregarAvatarSelecionado() {
-	document.getElementById('avatar_selecionado').style.backgroundImage = 'url("' + avatar_icons[localStorage.getItem('avatar_selecionado')] + '")';
+	document.getElementById('inventario_bt').src =  avatar_icons[localStorage.getItem('inventario_bt')] ;
+	document.getElementById('gambiarra').src = avatar_icons[localStorage.getItem('gambiarra')] ;
 }
 
 function carregarExercicioHospital() {
@@ -547,4 +551,20 @@ function carregarTutorialHospital2() {
 	document.getElementById('balao').replaceChild(novaDiv, antigaDiv);
 
 	timeout_handle = setTimeout(fraseCompleta, 2000);
+}
+
+function gameover(){
+    $("#telaExercicio").hide();
+    $("#celular").animate({
+        opacity: 0.4,
+        height: "-=50%",
+        marginTop: "+=40%"
+    }, 2000,function(){
+        $(this).hide();
+        $("#inventario_bt").hide();
+        $("#gambiarra").hide();
+        $("#termometro").hide();
+        $("#ajuda").hide();
+    });
+    $('#bg').addClass('gameover');
 }

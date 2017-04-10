@@ -18,7 +18,10 @@
 <body onselectstart="return false" onload="carregarTutorialBiblioteca1();">
 
 	<div id="content">
-	<div id="main">
+	<img id="ajuda"  src= "imagens/ajuda.png">
+	<img id="gambiarra" src='imagens/icon_avatarM1.png' onclick="abreFechaInventario()">
+	<div id="bg">
+	
 
 		<div id="termometro">
 			<!--<img id="termometroImg" src="imagens/termometro0.png" />-->
@@ -84,19 +87,15 @@
 			<img id="imagemCentral" onclick="mudaImagem()" src="imagens/hemograma_cel.png">
 		</div>
 
-	</div> <!-- Fecha Main -->
+	</div> <!-- Fecha telaInventário -->
 
 		<div class="balao balao_bottom" id="balao" style="display: none;">
 			<span class="animado botaoAcelerar" alt="acelerar" onclick="acelerar();"></span>
 		</div>
 
-		<div id="botoes_extras">
-			<div class="botao_extra" id="avatar_selecionado" onclick="abreFechaInventario()"></div>
-				<div class="botao_extra" id="botao_ajuda">?</div>
-		</div>
-
 		<div id="transparente"> </div>
 	
+	</div>
 	</div>
 
 </body>

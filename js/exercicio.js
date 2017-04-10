@@ -390,7 +390,7 @@
 			termometroCount += 1;
 			document.getElementById("termometro").style.backgroundImage = url + termometroCount + ".png')";
 		} else {
-			alert("game over");
+			gameover();
 		}
 	}
 

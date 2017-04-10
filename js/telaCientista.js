@@ -30,8 +30,7 @@ function enviar(){
     	document.getElementById("termometro").src = "imagens/Radar_8.png";
         $("#dialogBox").append('<div class="mensagem_enviada">Não</div>');
         $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-    	$("#dialogBox").append('<div class="mensagem_recebida">YOU DIEEEE!!</div>');
-    	$("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    	gameover();
     }
 }
 
@@ -45,6 +44,12 @@ function resposta(id){
 
 function someImagemOver(id){
     document.getElementById(id).style.display= "none";
+}
+
+mudarAvatar();
+
+function mudarAvatar(){
+    document.getElementById('inventario_bt').src=  avatar_icons[localStorage.getItem('inventario_bt')];
 }
 /*document.getElementById("textoCompleto").innerHTML = textoDialogo;
 

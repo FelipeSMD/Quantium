@@ -85,6 +85,8 @@ div{
 #celular{
 	position: absolute;
 	margin-top: 99px;
+	width: 444px;
+	height: 501px;
 	margin-left: 120px; 
 }
 
@@ -269,4 +271,35 @@ div{
 	font-size: 60%;
 	font-family: "Ubuntu-Medium-Italic";
 	margin-bottom: 1.5%;
+}
+
+.gameover {
+	animation: fimdejogo 15s;
+}
+
+#bg {
+	width: 800px;
+	height: 600px;
+    background-size: 800px 600px;
+    background-repeat: no-repeat;
+	background-image: url("../imagens/background_lab.png");
+	animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fimdejogo {
+	20% { background-image: url("../imagens/5.png"); }
+	40% { background-image: url("../imagens/6.png"); }
+	60% { background-image: url("../imagens/7.png"); }
+	80% { background-image: url("../imagens/8.png"); }
+	100% { background-image: url("../imagens/9.png"); }
+} 
+
+/* Standard syntax */ 
+@keyframes fimdejogo {
+	20% { background-image: url("../imagens/5.png"); }
+	40% { background-image: url("../imagens/6.png"); }
+	60% { background-image: url("../imagens/7.png"); }
+	80% { background-image: url("../imagens/8.png"); }
+	100% { background-image: url("../imagens/9.png"); }
 }

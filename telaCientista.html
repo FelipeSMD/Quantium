@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="lib/jquery-ui.js" DEFER></script>
 	<script type="text/javascript" src="js/functions.js" DEFER></script>
 	<script type="text/javascript" src="js/telaCientista.js" DEFER></script>
+	<script type="text/javascript" src="js/invetario.js" DEFER></script>
 
 	<link rel="stylesheet" type="text/css" href="css/telaCientista.css"/>
 	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
@@ -17,35 +18,35 @@
 </head>
 
 <body>
-	<img id="bg" src= "imagens/background_lab.png">
+	<div id="bg"> </div>
+	<img id="inventario_bt" src='imagens/icon_avatarM1.png' onclick="abreFechaInventario()">
 	<img id="ajuda"  src= "imagens/ajuda.png">
 	<img id="celular" src= "imagens/celular.png">
 	<img id="termometro" src= "imagens/Radar_0.png">
-	<div id="contatoBox"> </div>
-	<img id="cientista" src= "imagens/cientist_comeco.png">
-	<div id="nomeContato" class="nome_contato">
-		Alberto Stein
-	</div>
-	<div id="status" class="status_contato">
-		Science!
-	</div>
+	<div id="telaExercicio">
+		<div id="contatoBox"> </div>
+		<img id="cientista" src= "imagens/cientist_comeco.png">
+		<div id="nomeContato" class="nome_contato">
+			Alberto Stein
+		</div>
+		<div id="status" class="status_contato">
+			Science!
+		</div>
 
-	<div id="socialBox">
-		<img src="imagens/social2.png" />
-		<img src="imagens/social4.png" />
+		<div id="socialBox">
+			<img src="imagens/social2.png" />
+			<img src="imagens/social4.png" />
+		</div>
+		<img id="instrucao"src="imagens/instrucao3.png">
+		<div id="borda"></div>
+		<div id="Limpar" onclick="resetar()">  Apagar! </div>
+		<div id="Enviar" onclick="enviar()">  Enviar! </div>
+		<div id="botoes">
+			<span>|</span><div class="butto-option" id='bt1' onclick="resposta('bt1')" onmouseover="someImagemOver('instrucao')">Sim</div><span>|</span><div id='bt2' class="butto-option" onclick="resposta('bt2')" onmouseover="someImagemOver('instrucao')" >Não</div><span>|</span>
+		</div>
+		
+		<div id="dialogBox" ></div>
 	</div>
-	<img id="instrucao"src="imagens/instrucao3.png">
-	<div id="borda"></div>
-	<div id="Limpar" onclick="resetar()">  Apagar! </div>
-	<div id="Enviar" onclick="enviar()">  Enviar! </div>
-	<div id="botoes">
-		<span>|</span><div class="butto-option" id='bt1' onclick="resposta('bt1')" onmouseover="someImagemOver('instrucao')">Sim</div><span>|</span><div id='bt2' class="butto-option" onclick="resposta('bt2')" onmouseover="someImagemOver('instrucao')" >Não</div><span>|</span>
-	</div>
-	
-	
-
-
-	<div id="dialogBox" ></div>
 	<!--
 	<div id="tutorialBox">
 		<div id="textoAndamento1"></div>

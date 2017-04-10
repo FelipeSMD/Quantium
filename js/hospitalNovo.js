@@ -138,22 +138,19 @@ function switchMessage (count) {
             $("#text").append('<span class="replace" id="espaco22">|enviasse 1 ezame </span>');
             $("#text").append('<span class="replace" id="espaco23">|c a txa </span>');
             $("#text").append('<span class="replace" id="espaco24">|d leucocitos </span>');
-            $("#text").append('<span class="replace" id="espaco25">|d 1a pssoa </span>');
-            $("#text").append('<span class="replace" id="espaco26">|d 14anos infectda. </span>');  
+            $("#text").append('<span class="replace" id="espaco25">|d 1 adolescente </span>');
                 
 
             var buttonOption21 = new buttonOptions("Gostaria que você ", true, 1);
             var buttonOption22 = new buttonOptions("Qria q vc ", true, 1);       
-            var buttonOption23 = new buttonOptions("mand 1 enzame ", false, 2);
+            var buttonOption23 = new buttonOptions("mand 1 exame ", false, 2);
             var buttonOption24 = new buttonOptions("enviasse um exame ", true, 2);
             var buttonOption25 = new buttonOptions("c/ o tanto ", false, 3);
             var buttonOption26 = new buttonOptions("com a taxa ", true, 3);
             var buttonOption27 = new buttonOptions("de leucócitos ", true, 4);
-            var buttonOption28 = new buttonOptions("d lewcositus ", false, 4);
-            var buttonOption29 = new buttonOptions("de uma pessoa ", true, 5);       
-            var buttonOption210 = new buttonOptions("d una pesoa ", false, 5);
-            var buttonOption211 = new buttonOptions(" c 14anos duente ", false, 6);
-            var buttonOption212 = new buttonOptions(" de 14 anos infectada ", true, 6);
+            var buttonOption28 = new buttonOptions("d leucócitos ", false, 4);
+            var buttonOption29 = new buttonOptions("de um adolescente ", true, 5);       
+            var buttonOption210 = new buttonOptions("d 1 adolescente ", false, 5);
 
             buttonOptionArray = [   buttonOption21, 
                                     buttonOption22, 
@@ -164,9 +161,7 @@ function switchMessage (count) {
                                     buttonOption27,
                                     buttonOption28, 
                                     buttonOption29, 
-                                    buttonOption210, 
-                                    buttonOption211,
-                                    buttonOption212];
+                                    buttonOption210];
             
         break;
 
@@ -183,7 +178,7 @@ function switchMessage (count) {
             msgCount=1;
             buttonOptionArray = [];
 
-            $("#text").append('<span class="replace" id="espaco31">|td bem </span>');
+            $("#text").append('<span class="replace" id="espaco31">|tdb </span>');
             $("#text").append('<span class="replace" id="espaco32">|vlw </span>');
             
             var buttonOption31 = new buttonOptions("ok ", false, 1);
@@ -343,12 +338,11 @@ function switchMessage (count) {
                         testPlace[2] != 2 ||
                         testPlace[3] != 3 ||
                         testPlace[4] != 4 ||
-                        testPlace[5] != 5 ||
-                        testPlace[6] != 6 ){
+                        testPlace[5] != 5  ){
                             aumentarTermometro();
                             $("#mensagens").append('<p class="mensagem_recebida">O que você quis dizer mesmo?.</p');
                             return;                     
-                    } else if (acertosCount < 6){
+                    } else if (acertosCount < 5){
                         //alert("Muito acertos");
                         aumentarTermometro();
                         $("#mensagens").append('<p class="mensagem_recebida">Você está realmente dizendo algo ou são letras aleatórias?</p');
@@ -406,22 +400,26 @@ function zoom(){
     $("#mensagens").empty();
     $("#text").empty();
     $("#options").empty();
-    $("#mensagens").append('<div class="mensagem_recebida"><img id=\"hemogramaZoom\" src=\"imagens/hemogramaicon.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>');
+    $(".celular_content").append('<div class="zoom_hospital"><img id=\"hemogramaZoom\" src=\"imagens/tela_celular.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>');
+    $("#celular_footer").hide();
+    $("#mensagens").hide();
     $("#hemogramaZoom").elevateZoom({
         zoomType: "inner",
         cursor: "crosshair",
         easing : true
     });
     $("body").mousemove(function( event ) {
-        if(event.pageX > 400 && event.pageX < 425)
-            if(event.pageY > 300 && event.pageY < 325){
-                $( "body" ).off( "mousemove");
-                $("#hemogramaZoom").data("zoom-image","imagens/conf5.png").elevateZoom({
-                    zoomType: "inner",
-                    cursor: "crosshair",
-                    easing : true
-                });
+        if(event.pageX > 470 && event.pageX < 500)
+            if(event.pageY > 440 && event.pageY < 520){
+                window.setTimeout(function(){
+                    $( "body" ).off( "mousemove");
+                    $("#hemogramaZoom").data("zoom-image","imagens/tela_celular_preto.png").elevateZoom({
+                        zoomType: "inner",
+                        cursor: "crosshair",
+                        easing : true
+                });}, 400);
                    window.setTimeout(susto, 1000);
+
             }
     });
     mudaImagem("hemograma_cel");
@@ -514,17 +512,11 @@ function acelerarTexto(){
         }
     }
 
-    function gameover(){
-        $("#telaExercicio").hide();
-        $("#celular").animate({
-            opacity: 0.4,
-            height: "-=50%",
-            marginTop: "+=40%"
-        }, 2000,function(){
-            $(this).hide();
-            $("#inventario_bt").hide();
-            $("#termometro").hide();
-            $("#ajuda").hide();
-        });
-        $('#bg').addClass('gameover');
+mudarAvatar();
+
+function mudarAvatar(){
+    document.getElementById('inventario_bt').src=  avatar_icons[localStorage.getItem('inventario_bt')];
 }
+
+
+    

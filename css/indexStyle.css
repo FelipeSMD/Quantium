@@ -290,7 +290,7 @@ img.tweet {
   height: 15%;
   position: absolute;
   bottom: 0;
-  left: 25%;
+  left: 24%;
   cursor: pointer;
   z-index: 2;
 }
@@ -329,7 +329,7 @@ img.tweet {
 }*/
 
 #botao2 {
-  left: 37.5%;
+  left: 40%;
 }
 
 #botao3 {
