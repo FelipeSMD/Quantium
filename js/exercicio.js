@@ -395,6 +395,7 @@
 	}
 
 	function carregarTelaObrigado() {
+		localStorage.setItem("erros", termometroCount);
 		window.location.href = "videoConferencia.html";
 	}
 

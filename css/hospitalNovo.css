@@ -194,7 +194,7 @@ button {
     color: white;
     text-align: center;
     text-decoration: none;
-    margin: 2% auto;
+    margin: 2px auto;
     display: block;
     font-size: 15px;
     font-family: "Ubuntu";
@@ -213,7 +213,7 @@ button:hover {
     color: white;
     text-align: center;
     text-decoration: none;
-    margin: 2% auto;
+    margin: 2px auto;
     display: inline-block;
     font-size: 15px;
     font-family: "Ubuntu";
@@ -222,6 +222,14 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+.button-option {
+	margin: auto;
+}
+
+.button-option:hover {
+	margin: auto;
 }
 
 #celular_mensagens {
@@ -687,27 +695,32 @@ button:focus {
 }
 
 .pageButtons {
+	width: 20px;
+	height: 50px;
 	color: #fff;
 	font-size: 20px;
 	font-family: "Ubuntu";
 	display: inline-flex;
-	margin: auto;
+	margin: auto 0;
+	border: none;
+	background-size: 20px 50px;
 }
 
+#leftPage{
+	background-image: url("../imagens/setaEsquerda.png");
+}
+
+#rightPage{
+	background-image: url("../imagens/setaDireita.png");
+}
 .pageButtons:hover{
 	background-color: #156b5a; 
-    border:none;
-    border-right: solid;
-    border-right-width: 1px;
-    border-right-color: #8493A8;
-    border-left: solid;
-    border-left-width: 1px;
-    border-left-color: #8493A8;
+	border: none;
     color: white;
+    margin: auto 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 1% 0% 1% 0%;
     font-size: 20px;
     font-family: "Ubuntu";
     cursor: pointer;
@@ -757,6 +770,11 @@ button:focus {
 	60% { background-image: url("../imagens/7.png"); }
 	80% { background-image: url("../imagens/8.png"); }
 	100% { background-image: url("../imagens/9.png"); }
+}
+
+.desativado {
+    -webkit-filter: opacity(30%);
+    filter: opacity(30%);
 }
 
 

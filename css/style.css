@@ -87,3 +87,8 @@ span.animado {
   bottom: 2%;
   right: 2%;
 }
+
+.desativado {
+    -webkit-filter: opacity(30%);
+    filter: opacity(30%);
+}

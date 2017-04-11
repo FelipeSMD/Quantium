@@ -34,25 +34,30 @@
 	position: relative;
 	background-color: #fcfcfc;
 	color: black;
-	border-radius: 5px;
+	border-radius: 7px 7px 7px 0px;
 	width: 210px;
+    padding: 2%;
 	min-height: 20px;
-	margin-top: 5px;
+	margin: 5px;
 	font-family: "Ubuntu";
 	font-size: 14px;
+    clear: both;
 }
 
 .mensagem_enviada{
 	position: relative;
 	color: black;
 	background-color: #98FB98;
-	border-radius: 5px;
+	border-radius: 7px 7px 0px 7px;
 	width: 210px;
 	min-height: 20px;
-	left: 20px;
+    padding: 2%;
 	margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
 	font-family: "Ubuntu";
 	font-size: 14px;
+    float: right;
 	width: fit-content ;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
@@ -137,11 +142,11 @@ div{
 	background-color: #2aa089;
 	color: white;
 	margin-left: 255px;
-	top: 360px;
+	top: 355px;
 	width: 53px;
+    padding: 1px;
 	height: 20px;
 	cursor: pointer;
-	border-radius: 3px;
 }
 
 
@@ -150,11 +155,11 @@ div{
 	background-color: #2aa089;
 	color: white;
 	margin-left: 440px;
-	top: 360px;
+	top: 355px;
 	width: 50px;
+    padding: 1px;
 	height: 20px;
 	cursor: pointer;
-	border-radius: 3px;
 }
 
 
@@ -189,8 +194,10 @@ div{
 	margin-top: 12px;
 	top: 330px;
 	width: 248px;
-	height: 40px;
+	height: 100px;
 	background-color: #fcfcfc;
+    text-indent: 5px;
+    font-family: "Ubuntu";
 }
 
 #botoes{
@@ -200,11 +207,52 @@ div{
 	color: white;
 	display: inline-block;
 	border:1px solid #aaaaaa;
-	top: 382px;
+	top: 390px;
 	width: 249px;
-	height: 130px;
+	height: 124px;
 }
 
+.button {
+	background-color: #2aa089; 
+    border:none;
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: white;
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 0% 1% 0%;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+}
+
+.button:hover {
+	background-color: #156b5a; 
+    border:none;
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: #8493A8;
+    border-left: solid;
+    border-left-width: 1px;
+    border-left-color: #8493A8;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 0% 1% 0%;
+    font-size: 15px;
+    font-family: "Ubuntu";
+    cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
 
 #tutorialBox{
 	position: absolute;

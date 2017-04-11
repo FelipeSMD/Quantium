@@ -407,6 +407,9 @@ function carregarTutorialContatos1() {
 	if(j == 'true') {
 		$("#contato2").addClass("contatoDestacado");
 		document.getElementById("contato2").addEventListener("click", carregarExercicioHospital);
+		termometroCount = Number(localStorage.getItem("erros"));
+    	var url = "url('imagens/Radar_";	
+    	document.getElementById("termometro").style.backgroundImage = url + termometroCount + ".png')";	
 	}
 }
 
@@ -475,10 +478,14 @@ function carregarTutorialBiblioteca1() {
 		if(j == 'true') {
 			document.getElementById('celular_mensagens').style.display = 'none';
 			document.getElementById('divbuttons').style.display = 'none';
+			termometroCount = Number(localStorage.getItem("erros")) - 1;
+        	aumentarTermometro();
 			desconectar();
 			carregarFraseFinalBiblioteca();
 		} else {
-			document.getElementById('transparente').remove()
+			document.getElementById('transparente').remove();
+			termometroCount = Number(localStorage.getItem("erros")) - 1;
+        	aumentarTermometro();
 		}
 	}
 }
@@ -564,6 +571,7 @@ function gameover(){
         $("#inventario_bt").hide();
         $("#gambiarra").hide();
         $("#termometro").hide();
+        $("#radar").hide();
         $("#ajuda").hide();
     });
     $('#bg').addClass('gameover');

@@ -289,8 +289,8 @@ button:focus {
 	float: right;
 	margin: 2% 2% 2% 15%;
 	background-color:#98FB98;
-	border-radius: 7px;
-	padding: 1% 1% 1% 1%;
+	border-radius: 7px 7px 0px 7px;
+	padding: 2%;
 	position: relative;
 	max-width: 80%;
 	width: fit-content ;
@@ -302,8 +302,8 @@ button:focus {
 	clear: both;
 	margin: 2% 10% 2% 2%;
 	background-color:#fcfcfc;
-	border-radius: 7px;
-	padding: 1% 1% 1% 1%;
+	border-radius: 7px 7px 7px 0px;
+	padding: 2%;
 	position: relative;
 	max-width: 80%;
 	width: fit-content ;

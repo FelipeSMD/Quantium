@@ -8,6 +8,10 @@ function iniciarConf(){
 	setTimeout(carregarConf2, 3000);
 }
 
+function avatarVideo(){
+	document.getElementById('gambiarra').src = avatar_icons[localStorage.getItem('gambiarra')];
+}
+
 function carregarConf2(){
 	$('#videoConf1').hide();
 
@@ -87,7 +91,7 @@ function imagemZumbi(){
 	}
 	else
 	{	
-		console.log("12312321");
+		//console.log("12312321");
 		alpha2 = 0;
 		$('#videoConf4').show();
 		setTimeout(susto, 2000);

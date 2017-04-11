@@ -34,8 +34,8 @@ function enviar(){
     }
 }
 
-function resetar(){
-    location.reload();
+function resetar(){                          
+   document.getElementById("borda").innerHTML = "";
 }
 
 function resposta(id){

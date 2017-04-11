@@ -251,6 +251,8 @@ function switchMessage (count) {
 
     /* Jquery com as verificações */
     $(document).ready(function(){
+
+        atualizarErros();
         
         switchMessage(countMensage);
         
@@ -329,7 +331,7 @@ function switchMessage (count) {
                         }
                 if(acertosCount < 6){
                     aumentarTermometro();
-                    $("#mensagens").append('<p class="mensagem_recebida">Não sou muito bom nessa linguagem de jovem</p');
+                    $("#mensagens").append('<p class="mensagem_recebida">Não sou muito bom nessa linguagem atual</p');
                     return;
                 }
                 break;
@@ -510,6 +512,11 @@ function acelerarTexto(){
         } else {
             gameover();
         }
+    }
+
+    function atualizarErros(){
+        termometroCount = Number(localStorage.getItem("erros")) - 1;
+        aumentarTermometro();
     }
 
 mudarAvatar();
