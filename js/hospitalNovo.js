@@ -91,7 +91,7 @@ function switchMessage (count) {
             $("#text").append('<span class="replace" id="espaco12">|preciso fzr </span>');
             $("#text").append('<span class="replace" id="espaco13">|1 antibiotico </span>');
             $("#text").append('<span class="replace" id="espaco14">|pq 1 bacteria </span>');
-            $("#text").append('<span class="replace" id="espaco15">|tomou conta <img src=\'imagens/emoji_cidade.png\'> </span>');
+            $("#text").append('<span class="replace" id="espaco15">|tomou conta da <img src=\'imagens/emoji_cidade.png\'> </span>');
             $("#text").append('<span class="replace" id="espaco16">|Vc pde me ajudar? </span>');
         
             var buttonOption11 = new buttonOptions("Olá, como vai? ", true, 1);
@@ -411,8 +411,9 @@ function zoom(){
         easing : true
     });
     $("body").mousemove(function( event ) {
-        if(event.pageX > 470 && event.pageX < 500)
-            if(event.pageY > 440 && event.pageY < 520){
+        console.log(event.pageX,event.pageY);
+        if(event.pageX > 450 && event.pageX < 500)
+            if(event.pageY > 400 && event.pageY < 520){
                 window.setTimeout(function(){
                     $( "body" ).off( "mousemove");
                     $("#hemogramaZoom").data("zoom-image","imagens/tela_celular_preto.png").elevateZoom({
@@ -420,7 +421,8 @@ function zoom(){
                         cursor: "crosshair",
                         easing : true
                 });}, 400);
-                   window.setTimeout(susto, 1000);
+                    executa_som('susto_zumbi');
+                    window.setTimeout(susto, 1000);
 
             }
     });
@@ -428,10 +430,11 @@ function zoom(){
 }
 
 function susto(){
+    
     $("#mensagens").empty();
     $("#mensagens").append('<p class="mensagem_recebida">Baltazar Boaventura se desconectou.</p>');
     $("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
-    window.setTimeout(carregarContatos,2000);
+    window.setTimeout(carregarContatos,2500);
 }
 
     function carregarContatos() {

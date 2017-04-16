@@ -51,16 +51,15 @@ function carregarConf2(){
   } );*/
 
 function apagarEfeito(){	
-	//console.log("12312312321313");
 	$('#printEffect').css("opacity", alpha);
-	alpha -= 0.05;
+	alpha -= 0.1;
 	if(alpha > 0){
 		setTimeout(apagarEfeito, 20);	
 	}
 	else{		
 		alpha = 1;
 		$('#printEffect').hide();
-		setTimeout(fadeoutFunction, 1000);	
+		setTimeout(fadeoutFunction, 500);	
 	}
 }
 
@@ -91,32 +90,15 @@ function imagemZumbi(){
 	}
 	else
 	{	
-		//console.log("12312321");
-		alpha2 = 0;
-		$('#videoConf4').show();
+		alpha2 = 0;	
 		setTimeout(susto, 2000);
 	}
 }
 
 function susto(){
-	$('#videoConf4').css("opacity", alpha2);
-	alpha2 += 0.05;
-	if(alpha2 < 1){
-		setTimeout(susto, 20);	
-	}
-	else
-	{
-		setTimeout(chiado, 1000);	
-	}
-}
-
-function chiado(){
-	$('#videoConf5').show();
-
-	$('#videoConf4').hide();
-	$('#videoConf3').hide();
-
-	setTimeout(fraseFinal, 2000);
+	executa_som('psychotic_laugh');	
+	$('#videoConf4').show();
+	setTimeout(fraseFinal, 5000);
 }
 
 function fraseFinal(){

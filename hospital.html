@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/inventario.js" DEFER></script>
 
 	<link rel="stylesheet" type="text/css" href="css/hospitalNovo.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="css/inventarioStyle.css"/>
 	<!-- ESTE LINK SERÁ APAGADO FUTURAMENTE -->
 	<link rel="stylesheet" type="text/css" href="css/BOTOES_DESATIVADOS.css"/>
@@ -23,7 +24,7 @@
 
 </head>
 
-<body>
+<body onselectstart="return false" onload="executa_som('loop_gameplay');">
 	<div id="bg"></div>
 	<img id="ajuda"  src= "imagens/ajuda.png">
 	<img id="inventario_bt" src='imagens/icon_avatarM1.png' onclick="abreFechaInventario()">
@@ -48,7 +49,7 @@
 				
 			</div>
 			
-			<div id="mensagens">
+			<div id="mensagens" class="scrollbar">
 				
 			</div>
 			
@@ -63,17 +64,14 @@
 					<button id="send">Enviar!</button>
 				</div>
 				<div id="options">
-				<button class="pageButtons" id="leftPage"></button>
-				<div class="divbuttons" id="divbuttons1">
+					<div class="pageButtons" id="leftPage"></div>
+					<div class="divbuttons" id="divbuttons1"> </div>
+					<div class="divbuttons" id="divbuttons2"></div>
+					<div class="divbuttons" id="divbuttons3"></div>
+					<div class="divbuttons" id="divbuttons4"></div>
+					<div class="pageButtons" id="rightPage"></div>
 				</div>
-				<div class="divbuttons" id="divbuttons2">
-				</div>
-				<div class="divbuttons" id="divbuttons3">
-				</div>
-				<div class="divbuttons" id="divbuttons4">
-				</div>
-				<button class="pageButtons" id="rightPage"></button>
-				</div>
+				
 			</div>
 			<div id="videoConf5" style="display: none;"></div>
 		</div>

@@ -44,7 +44,21 @@ var texto14Frase1 = 'Nesse ambiente, a conversa deverá ser realizada passando';
 var texto14Frase2 = 'as frases em internetês para a linguagem formal.';
 var barraPiscando = '<span class="animado">|</span>';
 
+function executa_som(nome_som){
+	//executa o som inicial
+	var audio_inicio = document.createElement("audio");
+    audio_inicio.src = "sons/"+nome_som+".mp3";  
+    audio_inicio.addEventListener('ended', function () {
+               	this.currentTime = 0;
+    			this.play();
+            }, false); 
+    audio_inicio.play();
+    ///////////////////////
+}
+
+
 function inicioJogo() {
+
 	$('#balao').hide();
 
 	$('#inicioP').append('Clique para começar')

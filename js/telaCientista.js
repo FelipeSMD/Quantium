@@ -2,6 +2,10 @@ var textoDialogo = "Socorro, FULANO (A)! Pessoas estão sendo infectadas por um 
 var primeiraVez = 0;
 var finalTutorial = false;
 
+$( document ).ready(function() {
+    executa_som("loop_gameplay");
+});
+
 insertFirstMessage();
  function insertFirstMessage(){
     $("#dialogBox").append('<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>');

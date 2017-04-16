@@ -616,9 +616,9 @@ button:focus {
 }
 
 .divbuttons{
+	position: relative;
 	overflow: hidden;
 	width: 190px;
-    margin: 0 auto;
     display: inline-block;
     vertical-align: middle;
 }
@@ -670,7 +670,6 @@ button:focus {
 	animation: scan 5s linear infinite;
 	background: linear-gradient(-310deg, #fafafa 0%, transparent 49%);
 	border-radius: 0 0 120px 0; 
-	z-index: 999;
 }
 
 @keyframes scan {
@@ -695,35 +694,42 @@ button:focus {
 }
 
 .pageButtons {
+
 	width: 20px;
 	height: 50px;
 	color: #fff;
 	font-size: 20px;
 	font-family: "Ubuntu";
 	display: inline-flex;
-	margin: auto 0;
+	margin: 15px 5px 0px 5px;
 	border: none;
-	background-size: 20px 50px;
 }
 
 #leftPage{
-	background-image: url("../imagens/setaEsquerda.png");
+	float: left;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 15px 20px 0;
+	border-color: transparent #212b2d transparent transparent;
 }
 
 #rightPage{
-	background-image: url("../imagens/setaDireita.png");
+	float: right;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 20px 0 20px 15px;
+	border-color: transparent transparent transparent #212b2d;
 }
-.pageButtons:hover{
-	background-color: #156b5a; 
-	border: none;
-    color: white;
-    margin: auto 0;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-family: "Ubuntu";
-    cursor: pointer;
+
+#leftPage:hover{
+	border-color: transparent #39626A transparent transparent;
+	cursor: pointer;
+}
+#rightPage:hover{
+	border-color: transparent transparent transparent #39626A;
+	cursor: pointer;
 }
 
 #divbuttons2,
@@ -732,9 +738,15 @@ button:focus {
 	display: none;
 }
 
+#content_options{
+	position: relative;
+	margin-top: 10px;
+}
 
 #options {
+	position: relative;
 	text-align: center;
+	margin-top: 10px;
 }
 
 #hemogramaZoom {
