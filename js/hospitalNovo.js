@@ -36,7 +36,7 @@ var internetW = [['Oi, <img src=\'imagens/emoji_thumbsup.png\'/> ',
                     'tomou conta <img src=\'imagens/emoji_cidade.png\'> ',
                     'Vc pde me ajudar? '],
                     ['Gost q vc ',
-                    'enviasse 1 ezame ',
+                    'enviasse 1 exame ',
                     'c a txa ',
                     'd leucocitos ',
                     'd 1a pssoa d 14anos ',
@@ -135,7 +135,7 @@ function switchMessage (count) {
             buttonOptionArray = [];
 
             $("#text").append('<span class="replace" id="espaco21">|Gost q vc </span>');
-            $("#text").append('<span class="replace" id="espaco22">|enviasse 1 ezame </span>');
+            $("#text").append('<span class="replace" id="espaco22">|enviasse 1 exame </span>');
             $("#text").append('<span class="replace" id="espaco23">|c a txa </span>');
             $("#text").append('<span class="replace" id="espaco24">|d leucocitos </span>');
             $("#text").append('<span class="replace" id="espaco25">|d 1 adolescente </span>');

@@ -8,17 +8,26 @@ $( document ).ready(function() {
 
 insertFirstMessage();
  function insertFirstMessage(){
-    $("#dialogBox").append('<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>');
-    $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-
-    $("#dialogBox").append('<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>');
-    $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-
-    $("#dialogBox").append('<div class="mensagem_recebida">Como você domina o internetês e a norma culta, fale com algumas pessoas dos seus contatos para obter informações e terminar a fórmula.</div>');
-    $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-
-    $("#dialogBox").append('<div class="mensagem_recebida">Seja esperto e saiba se comunicar conforme o contexto adequado para não perder tempo. Aceita a missão?</div>');
-    $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    $("#dialogBox").append('<div class="mensagem_recebida enviando"><span>.</span><span>.</span><span>.</span></div>');
+    setTimeout(function(){
+        $("#dialogBox div").remove(".enviando");
+        $("#dialogBox").append('<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>');
+        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    }, 2000);
+    setTimeout(function(){
+        $("#dialogBox").append('<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>');
+        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    }, 6000);
+    setTimeout(function(){
+        $("#dialogBox").append('<div class="mensagem_recebida">Como você domina o internetês e a norma culta, fale com algumas pessoas dos seus contatos para obter informações e terminar a fórmula.</div>');
+        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+     }, 10000);    
+    setTimeout(function(){    
+        $("#dialogBox").append('<div class="mensagem_recebida">Seja esperto e saiba se comunicar conforme o contexto adequado para não perder tempo. Aceita a missão?</div>');
+        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+    }, 13000);
+    
+    
 }
 
 function enviar(){
