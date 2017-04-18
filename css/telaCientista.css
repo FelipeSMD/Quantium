@@ -350,6 +350,8 @@ div{
 
 .gameover {
 	animation: fimdejogo 15s;
+	-webkit-animation: fimdejogo 15s;
+	-moz-animation: fimdejogo 15s;
 }
 
 #bg {
@@ -372,6 +374,14 @@ div{
 
 /* Standard syntax */ 
 @keyframes fimdejogo {
+	20% { background-image: url("../imagens/5.png"); }
+	40% { background-image: url("../imagens/6.png"); }
+	60% { background-image: url("../imagens/7.png"); }
+	80% { background-image: url("../imagens/8.png"); }
+	100% { background-image: url("../imagens/9.png"); }
+}
+
+@-moz-keyframes fimdejogo {
 	20% { background-image: url("../imagens/5.png"); }
 	40% { background-image: url("../imagens/6.png"); }
 	60% { background-image: url("../imagens/7.png"); }

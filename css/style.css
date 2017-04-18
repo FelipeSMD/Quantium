@@ -131,6 +131,7 @@ span.animado {
   font-family: "Ubuntu";
   line-height: 0px;
   width: fit-content;
+  width: -moz-fit-content;
   padding: 0px 6px 3px 6px !important;
 }
 
@@ -159,7 +160,7 @@ span.animado {
   width: 32px;
   height: 32px;
   text-align: center;
-  line-height: 29px;
+  line-height: 29px !important;
   font: 30px "Ubuntu-Bold";
   color: #fafafa;
   border: 5px solid #fafafa;
