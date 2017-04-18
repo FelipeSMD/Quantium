@@ -588,8 +588,17 @@ function gameover(){
         $("#termometro").hide();
         $("#radar").hide();
         $("#ajuda").hide();
+        
     });
-    $('#bg').addClass('gameover');
+    setTimeout(function(){
+    	//adiciona botão de restart
+        $('#bg').append('<div class="botao" id="restart">&#8634;</div>');
+        $('#restart').click(function(){
+		window.location.href = "index.html";
+	});
+    },14000);
+    $('#bg').addClass('gameover'); 
+    
 }
 
 //função padrão para todos os append de mensagens que os personagens enviam ao usuário
@@ -599,8 +608,9 @@ function funcMensagensEnviadas(mensagem, tempo, verificaPrimeira , verificaUltim
 	}
     setTimeout(function(){
         $("#mensagens div").remove(".enviando");
-        $("#mensagens").append(mensagem);
-        $("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
+        $("#mensagens").append(mensagem)
+        			   .animate({scrollTop: $('#mensagens')
+        			   .prop("scrollHeight")}, 500);
         if(verificaUltima == false){ //se não for o ultimo texto, continua com a animação (usado apenas na telaCientista, colocar sempre true nas outras telas)
         	$("#mensagens").append(enviando);
         }

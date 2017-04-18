@@ -152,4 +152,32 @@ span.animado {
   50% { top: 7px; }
   100% {top: 2px; }
 }
-/*//////////////////////////////////////////////////////////////*/
+
+.botao {
+  width: 25%;
+  height: 90%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 29px;
+  font: 30px "Ubuntu-Bold";
+  color: #fafafa;
+  border: 5px solid #fafafa;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  -webkit-box-shadow: inset 0px 0px 3px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    inset 0px 0px 3px rgba(50, 50, 50, 0.75);
+  box-shadow:         inset 0px 0px 3px rgba(50, 50, 50, 0.75);
+}
+
+.botao:hover{
+  color: #cecece;
+  border-color: #cecece;
+}
+
+#restart{
+  cursor: pointer;
+  position: absolute;
+  left: 48%;
+  top: 60%;
+}
