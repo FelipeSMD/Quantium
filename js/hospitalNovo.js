@@ -194,18 +194,20 @@ function switchMessage (count) {
         break;
     }
 }
-
+    var mensagemBaltazar1 = '<p class="mensagem_recebida">Nossa! Estamos sabendo do ocorrido! Diga-me como posso ajudá-lo?</p';
+    var mensagemBaltazar2 = '<p class="mensagem_recebida">Entendi. Posso fazer isso para você.</p';
+    var mensagemBaltazar3 = '<div class="mensagem_recebida"><img id=\"hemogramaZoom\" src=\"imagens/hemogramaicon.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>';
+    
     function receiveMessage(){
-        //console.log("receive count = " + countMensage);
         switch(countMensage){
             case 1:
-                $("#mensagens").append('<p class="mensagem_recebida">Nossa! Estamos sabendo do ocorrido! Diga-me como posso ajudá-lo?</p');
+                funcMensagensEnviadas(mensagemBaltazar1, 1000,true, true);             
             break;
             case 2:
-                $("#mensagens").append('<p class="mensagem_recebida">Entendi. Posso fazer isso para você.</p');
+                funcMensagensEnviadas(mensagemBaltazar2, 1000,true, true);  
             break;
             case 3:
-                $("#mensagens").append('<div class="mensagem_recebida"><img id=\"hemogramaZoom\" src=\"imagens/hemogramaicon.png\" data-zoom-image=\"imagens/Zumbi_Aparecendo.png\" onclick=\"zoom()\" /></div>');
+                funcMensagensEnviadas(mensagemBaltazar3, 1000,true, true);               
             break;
         }       
     }

@@ -121,6 +121,35 @@ span.animado {
 .scrollbar:hover::-webkit-scrollbar-thumb
 {
   background-color: #848484;
-
-  
 }
+
+/*animação para quando alguem está digitando(bolinhas pulando)*/
+.enviando{
+  min-height: 20px;
+  color:#505050;
+  font-size:25px;
+  font-family: "Ubuntu";
+  line-height: 0px;
+  width: fit-content;
+  padding: 0px 6px 3px 6px !important;
+}
+
+.enviando span{
+  position: relative;
+  top:2px;
+  animation: jump 1s infinite;
+}
+
+.enviando span:nth-child(2){
+  animation-delay: 0.1s;
+}
+.enviando span:nth-child(3){
+  animation-delay: 0.2s;
+}
+
+@keyframes jump {
+  0% {top: 2px;}
+  50% { top: 7px; }
+  100% {top: 2px; }
+}
+/*//////////////////////////////////////////////////////////////*/

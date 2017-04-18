@@ -6,6 +6,7 @@ var tweets;
 var avatar_position = 0;
 var avatar_imagens = ["imagens/avatarF1.png", "imagens/avatarF2.png", "imagens/avatarM1.png", "imagens/avatarM2.png"];
 var avatar_icons = ["imagens/icon_avatarF1.png", "imagens/icon_avatarF2.png", "imagens/icon_avatarM1.png", "imagens/icon_avatarM2.png"];
+var enviando = '<div class="mensagem_recebida enviando"><span>.</span><span>.</span><span>.</span></div>'; //variavel que cria as reticências de quando alguem vai escrever
 
 //Textos
 var texto1Frase1 = 'Uma bactéria tomou conta da cidade Quantium. Sua causa é';
@@ -589,4 +590,19 @@ function gameover(){
         $("#ajuda").hide();
     });
     $('#bg').addClass('gameover');
+}
+
+//função padrão para todos os append de mensagens que os personagens enviam ao usuário
+function funcMensagensEnviadas(mensagem, tempo, verificaPrimeira , verificaUltima){
+	if(verificaPrimeira){ //se for o primeiro texto, já começa com a animação (usado apenas na telaCientista, colocar sempre true nas outras telas)
+		$("#mensagens").append(enviando);
+	}
+    setTimeout(function(){
+        $("#mensagens div").remove(".enviando");
+        $("#mensagens").append(mensagem);
+        $("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
+        if(verificaUltima == false){ //se não for o ultimo texto, continua com a animação (usado apenas na telaCientista, colocar sempre true nas outras telas)
+        	$("#mensagens").append(enviando);
+        }
+    }, tempo);
 }

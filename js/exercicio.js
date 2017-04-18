@@ -125,17 +125,21 @@
 			break;
 		}
 	}
+
+	var mensagemAmanda1 = '<p class="mensagem_recebida">Tdb!</p';
+	var mensagemAmanda2 = '<p class="mensagem_recebida">Com ctz, posso s! Onde acho?</p';
+	var mensagemAmanda3 = '<p class="mensagem_recebida">Tô te chamando na videoconferência, atende aí</p';
+
 	function receiveMessage(){
-		//console.log("receive count = " + countMensage);
 		switch(countMensage){
 			case 1:
-				$("#mensagens").append('<p class="mensagem_recebida">Tdb!</p');
+				funcMensagensEnviadas(mensagemAmanda1, 1000,true, true);		
 			break;
 			case 2:
-				$("#mensagens").append('<p class="mensagem_recebida">Com ctz, posso s! Onde acho?</p');
+				funcMensagensEnviadas(mensagemAmanda2, 1000,true, true);
 			break;
 			case 3:
-				$("#mensagens").append('<p class="mensagem_recebida">Tô te chamando na videoconferência, atende aí</p');
+				funcMensagensEnviadas(mensagemAmanda3, 1000,true, true);
 			break;
 		}		
 	}

@@ -2,47 +2,37 @@ var textoDialogo = "Socorro, FULANO (A)! Pessoas estão sendo infectadas por um 
 var primeiraVez = 0;
 var finalTutorial = false;
 
+var mensagemCientista1 = '<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>';
+var mensagemCientista2 = '<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>';
+var mensagemCientista3 = '<div class="mensagem_recebida">Como você domina o internetês e a norma culta, fale com algumas pessoas dos seus contatos para obter informações e terminar a fórmula.</div>'
+var mensagemCientista4 = '<div class="mensagem_recebida">Seja esperto e saiba se comunicar conforme o contexto adequado para não perder tempo. Aceita a missão?</div>';
+
 $( document ).ready(function() {
     executa_som("loop_gameplay");
+    insertFirstMessage();
 });
 
-insertFirstMessage();
- function insertFirstMessage(){
-    $("#dialogBox").append('<div class="mensagem_recebida enviando"><span>.</span><span>.</span><span>.</span></div>');
-    setTimeout(function(){
-        $("#dialogBox div").remove(".enviando");
-        $("#dialogBox").append('<div class="mensagem_recebida">Socorro, '+ localStorage.getItem("nomeJogador")+'! Não posso sair de casa ou vou me infectar.</div>');
-        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-    }, 2000);
-    setTimeout(function(){
-        $("#dialogBox").append('<div class="mensagem_recebida">Temos apenas um dia para terminar o antibiótico, ou a bactéria vai dominar a cidade!</div>');
-        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-    }, 6000);
-    setTimeout(function(){
-        $("#dialogBox").append('<div class="mensagem_recebida">Como você domina o internetês e a norma culta, fale com algumas pessoas dos seus contatos para obter informações e terminar a fórmula.</div>');
-        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-     }, 10000);    
-    setTimeout(function(){    
-        $("#dialogBox").append('<div class="mensagem_recebida">Seja esperto e saiba se comunicar conforme o contexto adequado para não perder tempo. Aceita a missão?</div>');
-        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
-    }, 13000);
-    
-    
+
+function insertFirstMessage(){
+    funcMensagensEnviadas(mensagemCientista1, 2000,true, false);
+    funcMensagensEnviadas(mensagemCientista2, 4000,false, false);
+    funcMensagensEnviadas(mensagemCientista3, 8000,false, false);
+    funcMensagensEnviadas(mensagemCientista4, 12000,false, true);
 }
 
 function enviar(){
 	var resp = document.getElementById("borda").innerHTML;
 	if(resp == "Sim"){
-		$("#dialogBox").append('<div class="mensagem_enviada">Sim</div>');
-    	$("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+		$("#mensagens").append('<div class="mensagem_enviada">Sim</div>');
+    	$("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
         setInterval(function () {
             localStorage.setItem("primeiraVez", true);
             window.location.href = 'contatos.html';
         }, 900);
     }else if(resp == "Não"){
     	document.getElementById("termometro").src = "imagens/Radar_8.png";
-        $("#dialogBox").append('<div class="mensagem_enviada">Não</div>');
-        $("#dialogBox").animate({scrollTop: $('#dialogBox').prop("scrollHeight")}, 500);
+        $("#mensagens").append('<div class="mensagem_enviada">Não</div>');
+        $("#mensagens").animate({scrollTop: $('#mensagens').prop("scrollHeight")}, 500);
     	gameover();
     }
 }

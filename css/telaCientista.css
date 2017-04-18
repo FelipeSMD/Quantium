@@ -43,36 +43,6 @@
 	font-size: 14px;
     clear: both;
 }
-.enviando{
-	color:#505050;
-	font-size:25px;
-	line-height: 0px;
-	width: fit-content;
-	padding: 0px 6px 3px 6px;
-	
-
-}
-.enviando span:nth-child(1){
-	position: relative;
-	animation: jump 1s infinite;
-}
-.enviando span:nth-child(2){
-	position: relative;
-	animation: jump 1s infinite;
-	animation-delay: 0.1s;
-}
-.enviando span:nth-child(3){
-	position: relative;
-	animation: jump 1s infinite;
-	animation-delay: 0.2s;
-}
-
-@keyframes jump {
-	0% {top: 0;}
-	50% { top: 7px;	}
-	100% {top: 0; }
-}
-
 
 .mensagem_enviada{
 	position: relative;
@@ -98,7 +68,7 @@ div{
 	top:0; 
 }
 
-#dialogBox{
+#mensagens{
 	color: #fcfcfc;
 	background-image: url(../imagens/background_celular.png);
 	position: absolute;
